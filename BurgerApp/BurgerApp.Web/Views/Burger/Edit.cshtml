@@ -1,0 +1,51 @@
+﻿@model BurgerViewModel
+@{
+    ViewData["Title"] = "Edit Burger";
+}
+
+<h2 class="fade-in">Edit Burger:</h2>
+
+<div class="row fade-in">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="custom-control-label"></label>
+                <input type="text" asp-for="Name" class="form-control custom-input" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Price" class="custom-control-label"></label>
+                <input type="number" asp-for="Price" class="form-control custom-input" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="BurgerSize" class="control-label"></label>
+                <select class="form-control custom-input" asp-for="BurgerSize" asp-items="Html.GetEnumSelectList<BurgerSize>()"></select>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <input type="checkbox" asp-for="IsVegetarian" class="custom-checkbox" />
+                <label asp-for="IsVegetarian" class="control-label"></label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" asp-for="IsVegan" class="custom-checkbox" />
+                <label asp-for="IsVegan" class="control-label"></label>
+            </div>
+
+            <div class="form-group">
+                <input type="checkbox" asp-for="HasFries" class="custom-checkbox" />
+                <label asp-for="HasFries" class="control-label"></label>
+            </div>
+
+            <hr />
+            <button type="submit" class="btn btn-outline-dark">Update Burger</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+        </form>
+    </div>
+</div>

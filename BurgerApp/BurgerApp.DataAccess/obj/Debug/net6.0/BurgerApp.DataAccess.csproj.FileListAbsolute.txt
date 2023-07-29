@@ -1,0 +1,17 @@
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\bin\Debug\net6.0\BurgerApp.DataAccess.deps.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\bin\Debug\net6.0\BurgerApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\bin\Debug\net6.0\BurgerApp.DataAccess.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\bin\Debug\net6.0\BurgerApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\bin\Debug\net6.0\BurgerApp.Domain.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.AssemblyInfo.cs
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.csproj.CopyComplete
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\refint\BurgerApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\ref\BurgerApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\bin\Debug\net6.0\BurgerApp.DataAccess.runtimeconfig.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.DataAccess\obj\Debug\net6.0\BurgerApp.DataAccess.genruntimeconfig.cache

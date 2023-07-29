@@ -1,0 +1,64 @@
+﻿@model List<BurgerListViewModel>
+@{
+    ViewData["Title"] = "Burgers";
+}
+
+<div class="fade-in">
+    <div class="text-center bounce-in">
+        <a asp-action="Create" asp-controller="Burger" class="btn btn-outline-success">Add new burger</a>
+        <h2 class="display-5">Burger List:</h2>
+    </div>
+</div>
+
+<br />
+<div class="row d-flex justify-content-center fade-in">
+    @foreach (var burger in @Model)
+    {
+        <div class="card burger-card">
+            <div class="card-header text-center">
+                <strong>@burger.Name</strong>
+            </div>
+
+            <div class="card-body">
+                <div>
+                    <strong>Price:</strong>
+                    <span>@burger.Price $</span>
+                </div>
+
+                <div>
+                    <strong>Burger Size:</strong>
+                    <span>@burger.BurgerSize</span>
+                </div>
+
+                <hr class="border-top border-primary border-4" />
+
+                <div>
+                    <span>
+                        <strong class="@(burger.IsVegetarian ? "text-success" : "text-danger")">
+                            @(burger.IsVegetarian ? "Burger is vegetarian!" : "Burger is not vegetarian!")
+                        </strong>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <strong class="@(burger.IsVegan ? "text-success" : "text-danger")">
+                            @(burger.IsVegan ? "Burger is vegan!" : "Burger is not vegan!")
+                        </strong>
+                    </span>
+                </div>
+                <div>
+                    <span>
+                        <strong class="@(burger.HasFries ? "text-success" : "text-danger")">
+                            @(burger.HasFries ? "Burger has fries!" : "Burger does not have fries!")
+                        </strong>
+                    </span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a asp-controller="Burger" asp-action="Edit" asp-route-id="@burger.Id" class="edit-link">Edit Burger</a>
+                <a asp-controller="Burger" asp-action="Delete" asp-route-id="@burger.Id" class="delete-link">Delete Burger</a>
+            </div>
+        </div>
+    }
+</div>

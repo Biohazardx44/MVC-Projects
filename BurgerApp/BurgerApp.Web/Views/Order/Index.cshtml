@@ -1,0 +1,82 @@
+﻿@model List<OrderListViewModel>
+@{
+    ViewData["Title"] = "Orders";
+}
+
+<div class="fade-in">
+    <div class="text-center bounce-in">
+        <a asp-action="Create" asp-controller="Order" class="btn btn-outline-success">Create new order</a>
+        <h2 class="display-5">Order List:</h2>
+    </div>
+</div>
+
+<br />
+<div class="row d-flex justify-content-center fade-in">
+    @foreach (var order in @Model)
+    {
+        <div class="card order-card @((order.IsDelivered ? "bg-success" : "bg-danger"))">
+            <div class="card-header text-center">
+                <span>
+                    @if (order.IsDelivered)
+                    {
+                        <span class="text-success">This order has been delivered!</span>
+                    }
+                    else
+                    {
+                        <span class="text-danger">This order has not been delivered!</span>
+                    }
+                </span>
+            </div>
+
+            <div class="card-body">
+                <div class="order-info">
+                    <strong>Order To:</strong>
+                    <span>@order.FullName</span>
+                    
+                    <br />
+                    <span>@order.Address</span>
+                </div>
+
+                <div class="order-info">
+                    <strong>Order From:</strong>
+                    @if (order.LocationName != null && order.LocationAddress != null)
+                    {
+                        <span>@order.LocationName</span>
+
+                        <br />
+                        <span>@order.LocationAddress</span>
+                    }
+                    else
+                    {
+                        <span>N/A</span>
+
+                        <br />
+                        <span>N/A</span>
+                    }
+                </div>
+
+                <hr class="border-top border-4" />
+
+                <strong>Burger List:</strong>
+                @if (order.BurgerNames != null && order.BurgerNames.Count > 0)
+                {
+                    <ul class="burger-list">
+                        @foreach (var group in order.BurgerNames.GroupBy(x => x))
+                        {
+                            <li>@group.Key - @group.Count()</li>
+                        }
+                    </ul>
+                }
+                else
+                {
+                    <span>N/A</span>
+                }
+            </div>
+
+            <div class="text-center">
+                <a asp-controller="Order" asp-action="Edit" asp-route-id="@order.Id" class="edit-link">Edit Order</a>
+                <a asp-controller="Order" asp-action="Delete" asp-route-id="@order.Id" class="delete-link">Delete Order</a>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,15 @@
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\bin\Debug\net6.0\BurgerApp.ViewModels.deps.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\bin\Debug\net6.0\BurgerApp.ViewModels.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\bin\Debug\net6.0\BurgerApp.ViewModels.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\bin\Debug\net6.0\BurgerApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\bin\Debug\net6.0\BurgerApp.Domain.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.csproj.AssemblyReference.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.AssemblyInfoInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.AssemblyInfo.cs
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.csproj.CopyComplete
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\refint\BurgerApp.ViewModels.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\BurgerApp.ViewModels.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.ViewModels\obj\Debug\net6.0\ref\BurgerApp.ViewModels.dll

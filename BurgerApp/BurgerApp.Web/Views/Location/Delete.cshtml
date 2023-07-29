@@ -1,0 +1,26 @@
+﻿@model LocationViewModel
+@{
+    ViewData["Title"] = "Delete Location";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">Are you sure you want to delete this location?</h2>
+
+    <div class="card main-card">
+        <div class="card-body">
+            <h5 class="card-title"><label asp-for="Name"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.Name</span></h5>
+            <h5 class="card-title"><label asp-for="Address"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.Address</span></h5>
+
+            <hr class="border-top border-secondary border-4" />
+            <h5 class="card-title"><label asp-for="OpensAt"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.OpensAt</span></h5>
+            <h5 class="card-title"><label asp-for="ClosesAt"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.ClosesAt</span></h5>
+        </div>
+    </div>
+
+    <hr />
+    <form asp-action="Delete" method="post" class="d-flex justify-content-center">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger btn-lg mx-2 w-25">Delete</button>
+        <a asp-action="Index" class="btn btn-success btn-lg mx-2 w-25">Cancel</a>
+    </form>
+</div>

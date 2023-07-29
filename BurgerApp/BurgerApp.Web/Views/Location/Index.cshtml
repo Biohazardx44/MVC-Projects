@@ -1,0 +1,52 @@
+﻿@model List<LocationListViewModel>
+@{
+    ViewData["Title"] = "Locations";
+}
+
+<div class="fade-in">
+    <div class="text-center bounce-in">
+        <a asp-action="Create" asp-controller="Location" class="btn btn-outline-success">Add new location</a>
+        <h2 class="display-5">Location List:</h2>
+    </div>
+</div>
+
+<br />
+<div class="row d-flex justify-content-center fade-in">
+    @foreach (var location in @Model)
+    {
+        <div class="card location-card">
+            <div class="card-header text-center">
+                <strong>@location.Name</strong>
+            </div>
+
+            <div class="card-body">
+                <div>
+                    <strong>Address:</strong>
+
+                    <br />
+                    <span>@location.Address</span>
+                </div>
+
+                <hr class="border-top border-primary border-4" />
+
+                <div>
+                    <strong>Opens At:</strong>
+
+                    <br />
+                    <span>@location.OpensAt</span>
+
+                    <br />
+                    <strong>Closes At:</strong>
+
+                    <br />
+                    <span>@location.ClosesAt</span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a asp-controller="Location" asp-action="Edit" asp-route-id="@location.Id" class="edit-link">Edit Location</a>
+                <a asp-controller="Location" asp-action="Delete" asp-route-id="@location.Id" class="delete-link">Delete Location</a>
+            </div>
+        </div>
+    }
+</div>

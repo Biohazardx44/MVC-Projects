@@ -1,0 +1,40 @@
+﻿@model LocationViewModel
+@{
+    ViewData["Title"] = "Edit Location";
+}
+
+<h2 class="fade-in">Edit Location:</h2>
+
+<div class="row fade-in">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="custom-control-label"></label>
+                <input type="text" asp-for="Name" class="form-control custom-input" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address" class="custom-control-label"></label>
+                <input type="text" asp-for="Address" class="form-control custom-input" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="OpensAt" class="control-label"></label>
+                <input type="time" asp-for="OpensAt" class="form-control custom-input" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ClosesAt" class="control-label"></label>
+                <input type="time" asp-for="ClosesAt" class="form-control custom-input" />
+            </div>
+
+            <hr />
+            <button type="submit" class="btn btn-outline-dark">Update Location</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+        </form>
+    </div>
+</div>

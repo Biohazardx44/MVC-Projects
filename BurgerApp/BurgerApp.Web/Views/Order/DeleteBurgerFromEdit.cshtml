@@ -1,0 +1,23 @@
+﻿@model BurgerOrderViewModel
+@{
+    ViewData["Title"] = "Remove Burger";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">Remove Burger</h2>
+
+    <form asp-action="DeleteBurgerFromEdit" method="post">
+        <input type="hidden" asp-for="OrderId" />
+
+        <div class="form-group">
+            <label>Select Burger To Remove</label>
+            <select asp-for="BurgerId" asp-items="@(new SelectList(ViewBag.Burgers, "Id", "Name"))" class="form-control custom-input w-50">
+                <option value="">-- Select Burger --</option>
+            </select>
+        </div>
+
+        <hr class="w-50" />
+        <button class="btn btn-outline-danger" type="submit">Remove Burger</button>
+        <a asp-action="Edit" asp-route-id="@Model.OrderId" class="btn btn-outline-dark">Cancel</a>
+    </form>
+</div>

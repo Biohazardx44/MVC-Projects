@@ -1,0 +1,21 @@
+﻿@model BurgerOrderViewModel
+@{
+    ViewData["Title"] = "Add Burger";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">Add Burger</h2>
+
+    <form asp-action="AddBurgerToEdit" method="post">
+        <input type="hidden" asp-for="OrderId" />
+
+        <div class="form-group">
+            <label asp-for="BurgerId" class="custom-control-label"></label>
+            <select class="form-control custom-input w-50" asp-for="BurgerId" asp-items="@(new SelectList(ViewBag.Burgers, "Id", "Name"))"></select>
+        </div>
+
+        <hr class="w-50" />
+        <button class="btn btn-outline-success">Add Burger</button>
+        <a asp-action="Edit" asp-route-id="@Model.OrderId" class="btn btn-outline-danger">Cancel</a>
+    </form>
+</div>

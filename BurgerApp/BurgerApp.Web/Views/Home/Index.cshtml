@@ -1,0 +1,96 @@
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center slide-in-left">
+    <h1 class="display-4">Welcome to our<br /><strong>Burger Shop</strong></h1>
+
+    <br />
+    <h4>
+        So far we have @Model.OrderCount order@((Model.OrderCount != 1) ? "s" : "")!
+        @((Model.OrderCount > 1) ? "Amazing, let's keep it up! :)" : (Model.OrderCount == 1) ? "At least it's something! :|" : "Nothing? Aww! :(")
+    </h4>
+
+    <br />
+    <h4>Average Order Price: @Model.OrderAveragePrice $</h4>
+
+    <br />
+    <div class="list-container">
+        <h4>Most Popular Burger/s:</h4>
+        @if (Model.MostPopularBurgers.Count > 0)
+        {
+            <ul>
+                @foreach (var burger in Model.MostPopularBurgers)
+                {
+                    @if (!string.IsNullOrEmpty(burger.Name))
+                    {
+                        <li>@burger.Name - @burger.Price $</li>
+                    }
+                }
+
+                @if (Model.MostPopularBurgers.All(burger => string.IsNullOrEmpty(burger.Name)))
+                {
+                    <li>No popular burgers yet :(</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No burger orders have been placed yet :(</p>
+        }
+    </div>
+
+    <br />
+    <div class="list-container">
+        <h4>All Locations:</h4>
+        @if (Model.BurgerLocations.Count > 0)
+        {
+            <ul>
+                @foreach (var location in Model.BurgerLocations)
+                {
+                    <li><strong>Name: </strong>@location.Name - <strong>Address: </strong>@location.Address</li>
+                }
+            </ul>
+        }
+        else
+        {
+            <p>No locations to show</p>
+        }
+    </div>
+</div>
+
+<!-- Button for mobile -->
+<div class="container d-md-none d-flex justify-content-end">
+    <button type="button" class="btn btn-primary pulse-button" id="openModalBtnMobile">
+        PROMOTION
+    </button>
+</div>
+
+<!-- Button for desktop -->
+<div class="container d-none d-md-block">
+    <button type="button" class="btn btn-primary pulse-button" id="openModalBtnDesktop">
+        PROMOTION
+    </button>
+</div>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Buy 1 Take 1 Burger FREE!!! 🍔🎉</h4>
+                <button type="button" class="close" id="closeModalBtn">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <p>Only TODAY!!! Don't miss out on this amazing promotion!</p>
+                <p>For your first order today, we are offering an irresistible deal - buy one burger and get another one absolutely FREE! Indulge in the mouthwatering goodness of our delicious burgers and treat yourself to a delightful meal with our special offer.</p>
+                <img src="./images/burger-special.jpg" alt="Burger Special" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="./js/site.js"></script>
+}

@@ -1,0 +1,10 @@
+﻿@{
+    ViewData["Title"] = "Burger Not Found";
+}
+
+<div class="fade-in">
+    <h2>@ViewData["Title"]</h2>
+    <p>The selected burger was not found in the order!</p>
+
+    <a asp-action="Edit" asp-route-id="@ViewBag.OrderId" class="btn btn-outline-primary">Back to Order Edit</a>
+</div>

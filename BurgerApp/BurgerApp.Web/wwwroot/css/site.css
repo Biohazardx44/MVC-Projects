@@ -1,0 +1,350 @@
+:root {
+    --primary-white: #ffffff;
+    --primary-black: #000000;
+    --primary-gray: #bababa;
+    --primary-orange: #ed7014;
+    --primary-brown: brown;
+    --primary-blue: #1c25dc;
+    --secondary-blue: #0ffff6;
+    --primary-red: #cc0000;
+    --secondary-red: #990000;
+    --primary-green: #00cc00;
+    --secondary-green: #009900;
+    --main-card-color: #f0f0f0;
+    --background-color: antiquewhite;
+    --border-color: #424242;
+    --burger-border-color: #a44cd3;
+    --burger-color: #f0bbf3;
+    --burger-header: #d90077;
+    --navbar-background-color: #d8c6ad;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    background-color: var(--background-color);
+    margin-bottom: 60px;
+}
+
+.navbar {
+    background-color: var(--navbar-background-color) !important;
+}
+
+.navbar-nav .nav-link {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    border: 1px solid var(--primary-black);
+    border-radius: 10px;
+    background-color: var(--primary-orange);
+    text-align: center;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: var(--primary-white) !important;
+        background-color: var(--primary-brown);
+    }
+
+.navbar-toggler {
+    border: 1px solid var(--primary-black) !important;
+}
+
+.custom-input {
+    background-color: var(--main-card-color);
+    border: 1px solid var(--primary-black);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .custom-input::placeholder {
+        color: var(--primary-white);
+    }
+
+    .custom-input:focus {
+        outline: none;
+        box-shadow: 0 2px 4px var(--primary-black);
+    }
+
+.custom-readonly-input {
+    border: 1px solid var(--primary-black);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-black);
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+    .custom-checkbox:checked {
+        background-color: var(--primary-green);
+        border-color: var(--primary-green);
+    }
+
+.main-card {
+    background-color: var(--main-card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--primary-black);
+}
+
+.order-card,
+.location-card {
+    border: 3px solid var(--border-color);
+    max-width: 21rem;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .order-card .card-header,
+    .location-card .card-header {
+        background-color: var(--primary-gray);
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .order-card .card-body,
+    .location-card .card-body,
+    .burger-card .card-body {
+        padding: 10px;
+    }
+
+    .order-card .order-info {
+        margin-bottom: 10px;
+    }
+
+        .order-card .order-info strong {
+            display: block;
+            font-weight: bold;
+        }
+
+    .order-card .burger-list {
+        margin: 0;
+        padding-left: 20px;
+    }
+
+    .order-card .edit-link,
+    .order-card .delete-link,
+    .location-card .edit-link,
+    .location-card .delete-link,
+    .burger-card .edit-link,
+    .burger-card .delete-link {
+        color: var(--primary-white);
+        text-decoration: none;
+        margin: 0 0 5px 0px;
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 10px;
+        font-weight: bold;
+        border: 2px solid var(--primary-black);
+    }
+
+    .order-card .edit-link,
+    .location-card .edit-link,
+    .burger-card .edit-link {
+        background-color: var(--primary-green);
+        margin-right: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+        .order-card .edit-link:hover,
+        .location-card .edit-link:hover,
+        .burger-card .edit-link:hover {
+            background-color: var(--secondary-green);
+        }
+
+    .order-card .delete-link,
+    .location-card .delete-link,
+    .burger-card .delete-link {
+        background-color: var(--primary-red);
+        transition: background-color 0.3s ease;
+    }
+
+        .order-card .delete-link:hover,
+        .location-card .delete-link:hover,
+        .burger-card .delete-link:hover {
+            background-color: var(--secondary-red);
+        }
+
+.burger-card {
+    background-color: var(--burger-color);
+    border: 3px solid var(--burger-border-color);
+    max-width: 21rem;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .burger-card .card-header {
+        background-color: var(--burger-header);
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 0 0 10px 10px;
+    }
+
+.list-container {
+    margin: 0 auto;
+}
+
+    .list-container ul {
+        list-style: none;
+        padding: 0;
+    }
+
+.burger-list-card {
+    width: 13rem;
+    border: 1px solid var(--primary-black);
+    border-radius: 5px;
+    background-color: var(--main-card-color);
+    margin: 0 0 5px 5px;
+}
+
+    .burger-list-card .card-body {
+        padding: 10px;
+    }
+
+.d-md-none {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+.pulse-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: var(--primary-white);
+    background-color: var(--primary-blue);
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+    .pulse-button:hover {
+        color: var(--primary-black);
+        background-color: var(--secondary-blue);
+    }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bounce {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce-in {
+    animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    80% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .d-md-block {
+        position: sticky;
+        bottom: 1.5rem;
+        z-index: 1000;
+    }
+
+    .navbar-nav .nav-link {
+        width: 8rem;
+        margin: 0 10px 0 0;
+    }
+
+    .order-card,
+    .location-card,
+    .burger-card {
+        max-width: 19.2rem;
+    }
+}

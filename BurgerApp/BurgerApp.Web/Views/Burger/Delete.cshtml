@@ -1,0 +1,41 @@
+﻿@model BurgerViewModel
+@{
+    ViewData["Title"] = "Delete Burger";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">Are you sure you want to delete this burger?</h2>
+
+    <div class="card main-card">
+        <div class="card-body">
+            <h5 class="card-title"><label asp-for="Name"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Name</span></h5>
+            <h5 class="card-title"><label asp-for="Price"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Price $</span></h5>
+            <h5 class="card-title"><label asp-for="BurgerSize"></label>: <span class="card-subtitle mb-2 text-muted">@Model.BurgerSize</span></h5>
+        </div>
+    </div>
+
+    <br />
+    <div>
+        <h4 class="card-title"><label asp-for="IsVegetarian"></label>:</h4>
+        <strong class="@(Model.IsVegetarian ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger")">
+            @(Model.IsVegetarian ? "This burger is vegetarian!" : "This burger is not vegetarian!")
+        </strong>
+
+        <h4 class="card-title"><label asp-for="IsVegan"></label>:</h4>
+        <strong class="@(Model.IsVegan ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger")">
+            @(Model.IsVegan ? "This burger is vegan!" : "This burger is not vegan!")
+        </strong>
+
+        <h4 class="card-title"><label asp-for="HasFries"></label>:</h4>
+        <strong class="@(Model.HasFries ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger")">
+            @(Model.HasFries ? "This burger has fries!" : "This burger does not have fries!")
+        </strong>
+    </div>
+
+    <hr />
+    <form asp-action="Delete" method="post" class="d-flex justify-content-center">
+        <input type="hidden" asp-for="Id" />
+        <button type="submit" class="btn btn-danger btn-lg mx-2 w-25">Delete</button>
+        <a asp-action="Index" class="btn btn-success btn-lg mx-2 w-25">Cancel</a>
+    </form>
+</div>
