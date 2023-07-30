@@ -33,26 +33,6 @@
                 <label asp-for="IsDelivered" class="control-label"></label>
             </div>
 
-            <br />
-            <a asp-action="AddBurgerToCreate" asp-route-id="@Model.Id" class="btn btn-outline-success">Add Burger</a>
-            <a asp-action="DeleteBurgerFromCreate" asp-route-id="@Model.Id" class="btn btn-outline-danger">Remove Burger</a>
-
-            @if (Model.BurgerNames != null && Model.BurgerNames.Count > 0)
-            {
-                <h5>List of Burgers:</h5>
-                <ul>
-                    @foreach (var group in Model.BurgerNames.GroupBy(x => x))
-                    {
-                        <li>@group.Key - @group.Count()</li>
-                    }
-                </ul>
-            }
-            else
-            {
-                <h5>List of Burgers:</h5>
-                <p>No burgers added to this order!</p>
-            }
-
             <hr />
             <button type="submit" class="btn btn-outline-dark">Create Order</button>
             <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>

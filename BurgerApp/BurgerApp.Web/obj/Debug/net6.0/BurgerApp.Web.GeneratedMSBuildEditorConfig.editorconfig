@@ -56,10 +56,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/nikol/Desktop/Code/MVC-Projects/BurgerApp/BurgerApp.Web/Views/Order/AddBurgerToCreate.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkQnVyZ2VyVG9DcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/nikol/Desktop/Code/MVC-Projects/BurgerApp/BurgerApp.Web/Views/Order/AddBurgerToEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcQWRkQnVyZ2VyVG9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

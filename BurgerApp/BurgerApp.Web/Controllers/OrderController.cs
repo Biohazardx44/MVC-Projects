@@ -128,18 +128,6 @@ namespace BurgerApp.Web.Controllers
         }
 
         [HttpGet]
-        public IActionResult AddBurgerToCreate()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        public IActionResult AddBurgerToCreate(BurgerOrderViewModel burgerOrderViewModel)
-        {
-            return View();
-        }
-
-        [HttpGet]
         public IActionResult AddBurgerToEdit(int id)
         {
             BurgerOrderViewModel burgerOrderViewModel = new BurgerOrderViewModel();
@@ -153,7 +141,7 @@ namespace BurgerApp.Web.Controllers
         {
             try
             {
-                _orderService.AddBurgerToEdit(burgerOrderViewModel);
+                _orderService.AddBurger(burgerOrderViewModel);
                 return RedirectToAction("Edit", new { id = burgerOrderViewModel.OrderId });
             }
             catch (Exception e)
@@ -176,7 +164,7 @@ namespace BurgerApp.Web.Controllers
         {
             try
             {
-                _orderService.DeleteBurgerFromEdit(burgerOrderViewModel);
+                _orderService.DeleteBurger(burgerOrderViewModel);
                 return RedirectToAction("Edit", new { id = burgerOrderViewModel.OrderId });
             }
             catch (Exception e)

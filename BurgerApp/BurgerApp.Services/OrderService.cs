@@ -23,12 +23,7 @@ namespace BurgerApp.Services
 
         }
 
-        public void AddBurgerToCreate(BurgerOrderViewModel burgerOrderViewModel)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void AddBurgerToEdit(BurgerOrderViewModel burgerOrderViewModel)
+        public void AddBurger(BurgerOrderViewModel burgerOrderViewModel)
         {
             var burgerDb = _burgerRepository.GetById(burgerOrderViewModel.BurgerId);
             if (burgerDb == null)
@@ -79,12 +74,7 @@ namespace BurgerApp.Services
             }
         }
 
-        public void DeleteBurgerFromCreate(BurgerOrderViewModel burgerOrderViewModel)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void DeleteBurgerFromEdit(BurgerOrderViewModel burgerOrderViewModel)
+        public void DeleteBurger(BurgerOrderViewModel burgerOrderViewModel)
         {
             var orderDb = _orderRepository.GetById(burgerOrderViewModel.OrderId);
             if (orderDb == null)
