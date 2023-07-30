@@ -20,8 +20,8 @@ namespace BurgerApp.Mappers.Extensions
                 Id = order.Id,
                 FullName = order.FullName,
                 Address = order.Address,
-                LocationName = order.Location.Name,
-                LocationAddress = order.Location.Address,
+                LocationName = order.Location?.Name,
+                LocationAddress = order.Location?.Address,
                 IsDelivered = order.IsDelivered,
                 BurgerNames = order.BurgerOrders?.Select(po => po.Burger.Name).ToList(),
                 LocationId = order.LocationId
