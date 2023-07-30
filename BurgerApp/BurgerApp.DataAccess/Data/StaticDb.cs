@@ -3,6 +3,9 @@ using BurgerApp.Domain.Models;
 
 namespace BurgerApp.DataAccess.Data
 {
+    /// <summary>
+    /// A static class representing a simple in-memory database for the BurgerApp application.
+    /// </summary>
     public static class StaticDb
     {
         public static int BurgerId { get; set; }
@@ -12,6 +15,7 @@ namespace BurgerApp.DataAccess.Data
         public static List<Order> Orders { get; set; }
         public static List<Location> Locations { get; set; }
 
+        // Static constructor to initialize the database with sample data
         static StaticDb()
         {
             BurgerId = 3;

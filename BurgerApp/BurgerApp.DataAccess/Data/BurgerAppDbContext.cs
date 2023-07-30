@@ -4,6 +4,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BurgerApp.DataAccess.Data
 {
+    /// <summary>
+    /// Represents the database context for the BurgerApp application, responsible for interacting with the underlying database.
+    /// </summary>
     public class BurgerAppDbContext : DbContext
     {
         public BurgerAppDbContext(DbContextOptions options) : base(options) { }
@@ -16,6 +19,7 @@ namespace BurgerApp.DataAccess.Data
         {
             base.OnModelCreating(modelBuilder);
 
+            // Configure entity relationships
             modelBuilder.Entity<Order>()
                 .HasMany(x => x.BurgerOrders)
                 .WithOne(x => x.Order)
@@ -31,6 +35,7 @@ namespace BurgerApp.DataAccess.Data
                 .WithOne(x => x.Burger)
                 .HasForeignKey(x => x.BurgerId);
 
+            // Seed initial data
             modelBuilder.Entity<Burger>()
                 .HasData(
                     new Burger

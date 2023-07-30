@@ -23,7 +23,11 @@ namespace BurgerApp.Services
 
         }
 
-        public void AddBurger(BurgerOrderViewModel burgerOrderViewModel)
+        /// <summary>
+        /// Adds a burger to an existing order.
+        /// </summary>
+        /// <param name="burgerOrderViewModel">The view model containing the burger order details.</param>
+        public void AddBurgerToEdit(BurgerOrderViewModel burgerOrderViewModel)
         {
             var burgerDb = _burgerRepository.GetById(burgerOrderViewModel.BurgerId);
             if (burgerDb == null)
@@ -45,6 +49,10 @@ namespace BurgerApp.Services
             _orderRepository.Update(orderDb);
         }
 
+        /// <summary>
+        /// Calculates the average price of all orders in the database.
+        /// </summary>
+        /// <returns>The average order price.</returns>
         public int AverageOrderPrice()
         {
             List<Order> orderDb = _orderRepository.GetAll();
@@ -59,6 +67,10 @@ namespace BurgerApp.Services
             return averagePrice;
         }
 
+        /// <summary>
+        /// Creates a new order in the database.
+        /// </summary>
+        /// <param name="orderViewModel">The view model containing the order details.</param>
         public void CreateOrder(OrderViewModel orderViewModel)
         {
             Location locationDb = _locationRepository.GetOrCreateLocation(orderViewModel.LocationName, orderViewModel.LocationAddress);
@@ -74,7 +86,11 @@ namespace BurgerApp.Services
             }
         }
 
-        public void DeleteBurger(BurgerOrderViewModel burgerOrderViewModel)
+        /// <summary>
+        /// Deletes a burger from an existing order in the database.
+        /// </summary>
+        /// <param name="burgerOrderViewModel">The view model containing the burger order details.</param>
+        public void DeleteBurgerFromEdit(BurgerOrderViewModel burgerOrderViewModel)
         {
             var orderDb = _orderRepository.GetById(burgerOrderViewModel.OrderId);
             if (orderDb == null)
@@ -93,6 +109,10 @@ namespace BurgerApp.Services
             _orderRepository.Update(orderDb);
         }
 
+        /// <summary>
+        /// Deletes an order from the database based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the order to be deleted.</param>
         public void DeleteOrder(int id)
         {
             Order orderDb = _orderRepository.GetById(id);
@@ -103,6 +123,10 @@ namespace BurgerApp.Services
             _orderRepository.DeleteById(id);
         }
 
+        /// <summary>
+        /// Updates an existing order in the database with the new details.
+        /// </summary>
+        /// <param name="orderViewModel">The view model containing the updated order details.</param>
         public void EditOrder(OrderViewModel orderViewModel)
         {
             Order orderDb = _orderRepository.GetById(orderViewModel.Id);
@@ -117,18 +141,31 @@ namespace BurgerApp.Services
             _orderRepository.Update(orderDb);
         }
 
+        /// <summary>
+        /// Retrieves a list of all burgers from the database.
+        /// </summary>
+        /// <returns>A list of burger view models.</returns>
         public List<BurgerViewModel> GetAllBurgers()
         {
             List<Burger> burgers = _burgerRepository.GetAll();
             return burgers.Select(x => x.MapToBurgerViewModel()).ToList();
         }
 
+        /// <summary>
+        /// Retrieves a list of all orders from the database.
+        /// </summary>
+        /// <returns>A list of order view models.</returns>
         public List<OrderListViewModel> GetAllOrders()
         {
             List<Order> dbOrders = _orderRepository.GetAll();
             return dbOrders.Select(x => x.MapToOrderListViewModel()).ToList();
         }
 
+        /// <summary>
+        /// Retrieves the details of a specific order from the database based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the order to retrieve.</param>
+        /// <returns>The view model representing the details of the specified order.</returns>
         public OrderViewModel GetOrderDetails(int id)
         {
             Order orderDb = _orderRepository.GetById(id);
@@ -139,6 +176,11 @@ namespace BurgerApp.Services
             return orderDb.MapToOrderViewModel();
         }
 
+        /// <summary>
+        /// Retrieves an order view model for editing based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the order to retrieve for editing.</param>
+        /// <returns>The view model representing the order details for editing.</returns>
         public OrderViewModel GetOrderForEditing(int id)
         {
             Order orderDb = _orderRepository.GetById(id);

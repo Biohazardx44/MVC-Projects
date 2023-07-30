@@ -21,6 +21,12 @@ namespace BurgerApp.Web.Controllers
             _locationService = locationService;
         }
 
+        /// <summary>
+        /// Action method that handles the HTTP GET request for the home page.
+        /// It retrieves the data needed to display on the home page, such as most popular burgers,
+        /// total order count, average order price, and burger locations, and returns the "Index" view.
+        /// </summary>
+        /// <returns>The "Index" view with the required data.</returns>
         public IActionResult Index()
         {
             HomeIndexViewModel homeIndexViewModel = new HomeIndexViewModel();

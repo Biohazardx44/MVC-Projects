@@ -14,6 +14,10 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
             _burgerAppDbContext = burgerAppDbContext;
         }
 
+        /// <summary>
+        /// Deletes an order with the specified ID from the database.
+        /// </summary>
+        /// <param name="id">The ID of the order to delete.</param>
         public void DeleteById(int id)
         {
             Order orderDb = _burgerAppDbContext.Orders.FirstOrDefault(order => order.Id == id);
@@ -28,6 +32,10 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
 
         }
 
+        /// <summary>
+        /// Gets a list of all orders from the database, including associated burger orders and locations.
+        /// </summary>
+        /// <returns>A list of all orders.</returns>
         public List<Order> GetAll()
         {
             return _burgerAppDbContext
@@ -38,6 +46,11 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
                 .ToList();
         }
 
+        /// <summary>
+        /// Gets an order by its ID from the database, including associated burger orders and location.
+        /// </summary>
+        /// <param name="id">The ID of the order to retrieve.</param>
+        /// <returns>The order with the specified ID, or null if not found.</returns>
         public Order GetById(int id)
         {
             return _burgerAppDbContext
@@ -48,12 +61,21 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplem
                    .FirstOrDefault(x => x.Id == id)!;
         }
 
+        /// <summary>
+        /// Inserts a new order into the database.
+        /// </summary>
+        /// <param name="entity">The order to insert.</param>
+        /// <returns>The ID of the newly inserted order.</returns>
         public int Insert(Order entity)
         {
             _burgerAppDbContext.Orders.Add(entity);
             return _burgerAppDbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Updates an existing order in the database.
+        /// </summary>
+        /// <param name="entity">The order to update.</param>
         public void Update(Order entity)
         {
             _burgerAppDbContext.Orders.Update(entity);

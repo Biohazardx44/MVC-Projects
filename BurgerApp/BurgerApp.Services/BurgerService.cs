@@ -18,6 +18,10 @@ namespace BurgerApp.Services
             _burgerRepository = burgerRepository;
         }
 
+        /// <summary>
+        /// Adds a new burger to the database.
+        /// </summary>
+        /// <param name="burgerViewModel">The view model containing the burger details.</param>
         public void AddBurger(BurgerViewModel burgerViewModel)
         {
             Burger burger = new Burger();
@@ -31,6 +35,10 @@ namespace BurgerApp.Services
             }
         }
 
+        /// <summary>
+        /// Deletes a burger from the database based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the burger to be deleted.</param>
         public void DeleteBurger(int id)
         {
             Burger burgerDb = _burgerRepository.GetById(id);
@@ -41,6 +49,10 @@ namespace BurgerApp.Services
             _burgerRepository.DeleteById(id);
         }
 
+        /// <summary>
+        /// Updates an existing burger in the database with the new details.
+        /// </summary>
+        /// <param name="burgerViewModel">The view model containing the updated burger details.</param>
         public void EditBurger(BurgerViewModel burgerViewModel)
         {
             Burger burgerDb = _burgerRepository.GetById(burgerViewModel.Id);
@@ -54,12 +66,21 @@ namespace BurgerApp.Services
             _burgerRepository.Update(burgerDb);
         }
 
+        /// <summary>
+        /// Retrieves a list of all burgers from the database.
+        /// </summary>
+        /// <returns>A list of view models representing all burgers.</returns>
         public List<BurgerListViewModel> GetAllBurgers()
         {
             List<Burger> dbBurgers = _burgerRepository.GetAll();
             return dbBurgers.Select(x => x.MapToBurgerListViewModel()).ToList();
         }
 
+        /// <summary>
+        /// Retrieves the details of a specific burger from the database based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the burger to retrieve.</param>
+        /// <returns>The view model representing the details of the specified burger.</returns>
         public BurgerViewModel GetBurgerDetails(int id)
         {
             Burger burgerDb = _burgerRepository.GetById(id);
@@ -70,6 +91,11 @@ namespace BurgerApp.Services
             return burgerDb.MapToBurgerViewModel();
         }
 
+        /// <summary>
+        /// Retrieves a burger view model for editing based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the burger to retrieve for editing.</param>
+        /// <returns>The view model representing the burger details for editing.</returns>
         public BurgerViewModel GetBurgerForEditing(int id)
         {
             Burger burgerDb = _burgerRepository.GetById(id);
@@ -81,12 +107,20 @@ namespace BurgerApp.Services
             return burgerDb.MapToBurgerViewModel();
         }
 
+        /// <summary>
+        /// Retrieves a list of burger view models for use in dropdowns.
+        /// </summary>
+        /// <returns>A list of burger view models.</returns>
         public List<BurgerViewModel> GetBurgersForDropdown()
         {
             List<Burger> burgerDb = _burgerRepository.GetAll();
             return burgerDb.Select(x => x.MapToBurgerViewModel()).ToList();
         }
 
+        /// <summary>
+        /// Retrieves a list of the most popular burgers based on the number of times they have been ordered.
+        /// </summary>
+        /// <returns>A list of the most popular burger view models.</returns>
         public List<BurgerViewModel> GetMostPopularBurgers()
         {
             List<Order> orders = _orderRepository.GetAll();
