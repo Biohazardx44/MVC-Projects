@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34003.232
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PizzaApp.Web", "PizzaApp.Web\PizzaApp.Web.csproj", "{0FBBC9E3-46CD-4B4D-831D-1AEC2475A50D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0FBBC9E3-46CD-4B4D-831D-1AEC2475A50D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FBBC9E3-46CD-4B4D-831D-1AEC2475A50D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FBBC9E3-46CD-4B4D-831D-1AEC2475A50D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FBBC9E3-46CD-4B4D-831D-1AEC2475A50D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13BB6A21-7D9B-4420-8904-E320D933CAC8}
+	EndGlobalSection
+EndGlobal
