@@ -1,0 +1,50 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "PizzaApp.Mappers/1.0.0": {
+        "dependencies": {
+          "PizzaApp.Domain": "1.0.0",
+          "PizzaApp.ViewModels": "1.0.0"
+        },
+        "runtime": {
+          "PizzaApp.Mappers.dll": {}
+        }
+      },
+      "PizzaApp.Domain/1.0.0": {
+        "runtime": {
+          "PizzaApp.Domain.dll": {}
+        }
+      },
+      "PizzaApp.ViewModels/1.0.0": {
+        "dependencies": {
+          "PizzaApp.Domain": "1.0.0"
+        },
+        "runtime": {
+          "PizzaApp.ViewModels.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PizzaApp.Mappers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PizzaApp.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PizzaApp.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -68,26 +68,24 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
         /// <returns>The existing location with the specified name or address, or a new location if not found.</returns>
         public Location GetOrCreateLocation(string name, string address)
         {
-            Location locationDb = GetByName(name);
-            if (locationDb == null)
-            {
-                locationDb = GetByAddress(address);
-                if (locationDb == null)
-                {
-                    locationDb = new Location
-                    {
-                        Name = name,
-                        Address = address
-                    };
+            Location location = GetByName(name) ?? GetByAddress(address);
 
-                    int newLocationId = Insert(locationDb);
-                    if (newLocationId <= 0)
-                    {
-                        throw new Exception("An error occurred while saving the new location to the database!");
-                    }
+            if (location == null)
+            {
+                location = new Location
+                {
+                    Name = name,
+                    Address = address
+                };
+
+                int newLocationId = Insert(location);
+                if (newLocationId <= 0)
+                {
+                    throw new Exception("An error occurred while saving the new location to the database!");
                 }
             }
-            return locationDb;
+
+            return location;
         }
 
         /// <summary>

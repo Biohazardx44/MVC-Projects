@@ -14,6 +14,6 @@ namespace BurgerApp.Services.Abstraction
         void AddBurgerToEdit(BurgerOrderViewModel burgerOrderViewModel);
         void DeleteBurgerFromEdit(BurgerOrderViewModel burgerOrderViewModel);
         List<BurgerViewModel> GetAllBurgers();
-        int AverageOrderPrice();
+        decimal AverageOrderPrice();
     }
 }

@@ -1,0 +1,11 @@
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\bin\Debug\net6.0\PizzaApp.Domain.deps.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\bin\Debug\net6.0\PizzaApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\bin\Debug\net6.0\PizzaApp.Domain.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.AssemblyInfoInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.AssemblyInfo.cs
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.csproj.CoreCompileInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\refint\PizzaApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\ref\PizzaApp.Domain.dll

@@ -30,16 +30,12 @@
                 <hr class="border-top border-primary border-4" />
 
                 <div>
-                    <strong>Opens At:</strong>
-
-                    <br />
-                    <span>@location.OpensAt</span>
+                    <strong>Mon - Fri:<br />Opens At:</strong>
+                    <span>@location.OpensAt.ToString("h tt")</span>
 
                     <br />
                     <strong>Closes At:</strong>
-
-                    <br />
-                    <span>@location.ClosesAt</span>
+                    <span>@location.ClosesAt.ToString("h tt")</span>
                 </div>
             </div>
 

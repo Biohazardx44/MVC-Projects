@@ -9,7 +9,7 @@
     <div class="card main-card">
         <div class="card-body">
             <h5 class="card-title"><label asp-for="Name"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Name</span></h5>
-            <h5 class="card-title"><label asp-for="Price"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Price $</span></h5>
+            <h5 class="card-title"><label asp-for="Price"></label>: <span class="card-subtitle mb-2 text-muted">@Math.Round(Model.Price, 2) $</span></h5>
             <h5 class="card-title"><label asp-for="BurgerSize"></label>: <span class="card-subtitle mb-2 text-muted">@Model.BurgerSize</span></h5>
         </div>
     </div>

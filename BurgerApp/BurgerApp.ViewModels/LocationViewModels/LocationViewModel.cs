@@ -13,8 +13,8 @@ namespace BurgerApp.ViewModels.LocationViewModels
         [Display(Name = "New Shop Address")]
         public string Address { get; set; } = string.Empty;
         [Display(Name = "Opens At")]
-        public TimeSpan OpensAt { get; set; }
+        public DateTime OpensAt { get; set; }
         [Display(Name = "Closes At")]
-        public TimeSpan ClosesAt { get; set; }
+        public DateTime ClosesAt { get; set; }
     }
 }

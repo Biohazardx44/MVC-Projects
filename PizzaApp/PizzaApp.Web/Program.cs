@@ -1,7 +1,15 @@
+using PizzaApp.Helpers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var connectionString = builder.Configuration.GetConnectionString("PizzaAppCS");
+
+builder.Services.InjectServices();
+builder.Services.InjectRepositories();
+builder.Services.InjectDbContext(connectionString);
 
 var app = builder.Build();
 

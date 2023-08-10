@@ -7,7 +7,7 @@ namespace BurgerApp.ViewModels.HomeViewModels
     {
         public int OrderCount { get; set; }
         public List<BurgerViewModel> MostPopularBurgers { get; set; }
-        public int OrderAveragePrice { get; set; }
+        public decimal OrderAveragePrice { get; set; }
         public List<LocationListViewModel> BurgerLocations { get; set; }
     }
 }

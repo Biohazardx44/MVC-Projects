@@ -126,19 +126,18 @@ namespace BurgerApp.Services
             List<Order> orders = _orderRepository.GetAll();
             Dictionary<int, int> burgerCountMap = new Dictionary<int, int>();
 
-            foreach (var order in orders)
+            var burgerOrders = orders.SelectMany(x => x.BurgerOrders);
+
+            foreach (var burgerOrder in burgerOrders)
             {
-                foreach (var burgerOrder in order.BurgerOrders)
+                int burgerId = burgerOrder.BurgerId;
+                if (burgerCountMap.ContainsKey(burgerId))
                 {
-                    int burgerId = burgerOrder.BurgerId;
-                    if (burgerCountMap.ContainsKey(burgerId))
-                    {
-                        burgerCountMap[burgerId]++;
-                    }
-                    else
-                    {
-                        burgerCountMap[burgerId] = 1;
-                    }
+                    burgerCountMap[burgerId]++;
+                }
+                else
+                {
+                    burgerCountMap[burgerId] = 1;
                 }
             }
 

@@ -1,5 +1,4 @@
-﻿using BurgerApp.Domain.Models;
-using BurgerApp.ViewModels.LocationViewModels;
+﻿using BurgerApp.ViewModels.LocationViewModels;
 
 namespace BurgerApp.Services.Abstraction
 {

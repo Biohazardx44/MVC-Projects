@@ -46,8 +46,8 @@ namespace BurgerApp.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Price")
-                        .HasColumnType("int");
+                    b.Property<decimal>("Price")
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 
@@ -62,7 +62,7 @@ namespace BurgerApp.DataAccess.Migrations
                             IsVegan = false,
                             IsVegetarian = false,
                             Name = "Chicken Burger",
-                            Price = 20
+                            Price = 20.35m
                         },
                         new
                         {
@@ -72,7 +72,7 @@ namespace BurgerApp.DataAccess.Migrations
                             IsVegan = true,
                             IsVegetarian = true,
                             Name = "Veggie Burger",
-                            Price = 10
+                            Price = 10.20m
                         },
                         new
                         {
@@ -82,7 +82,7 @@ namespace BurgerApp.DataAccess.Migrations
                             IsVegan = false,
                             IsVegetarian = false,
                             Name = "Cheeseburger",
-                            Price = 35
+                            Price = 35.65m
                         });
                 });
 
@@ -141,15 +141,15 @@ namespace BurgerApp.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<TimeSpan>("ClosesAt")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("ClosesAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<TimeSpan>("OpensAt")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("OpensAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
@@ -160,17 +160,17 @@ namespace BurgerApp.DataAccess.Migrations
                         {
                             Id = 1,
                             Address = "1371 Queen St W",
-                            ClosesAt = new TimeSpan(0, 22, 0, 0, 0),
+                            ClosesAt = new DateTime(1, 1, 5, 22, 0, 0, 0, DateTimeKind.Unspecified),
                             Name = "Quuen St.Burger Shop",
-                            OpensAt = new TimeSpan(0, 8, 0, 0, 0)
+                            OpensAt = new DateTime(1, 1, 1, 8, 0, 0, 0, DateTimeKind.Unspecified)
                         },
                         new
                         {
                             Id = 2,
                             Address = "360 Main St",
-                            ClosesAt = new TimeSpan(0, 23, 0, 0, 0),
+                            ClosesAt = new DateTime(1, 1, 5, 23, 30, 0, 0, DateTimeKind.Unspecified),
                             Name = "Main St.Burger Shop",
-                            OpensAt = new TimeSpan(0, 9, 0, 0, 0)
+                            OpensAt = new DateTime(1, 1, 1, 9, 0, 0, 0, DateTimeKind.Unspecified)
                         });
                 });
 

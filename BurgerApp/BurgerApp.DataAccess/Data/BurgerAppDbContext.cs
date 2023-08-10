@@ -35,6 +35,11 @@ namespace BurgerApp.DataAccess.Data
                 .WithOne(x => x.Burger)
                 .HasForeignKey(x => x.BurgerId);
 
+            // Configure column type for Price property
+            modelBuilder.Entity<Burger>()
+                .Property(b => b.Price)
+                .HasColumnType("decimal(18, 2)");
+
             // Seed initial data
             modelBuilder.Entity<Burger>()
                 .HasData(
@@ -43,7 +48,7 @@ namespace BurgerApp.DataAccess.Data
                         Id = 1,
                         Name = "Chicken Burger",
                         BurgerSize = BurgerSize.Medium,
-                        Price = 20,
+                        Price = 20.35m,
                         IsVegetarian = false,
                         IsVegan = false,
                         HasFries = true
@@ -53,7 +58,7 @@ namespace BurgerApp.DataAccess.Data
                         Id = 2,
                         Name = "Veggie Burger",
                         BurgerSize = BurgerSize.Small,
-                        Price = 10,
+                        Price = 10.20m,
                         IsVegetarian = true,
                         IsVegan = true,
                         HasFries = false
@@ -63,7 +68,7 @@ namespace BurgerApp.DataAccess.Data
                         Id = 3,
                         Name = "Cheeseburger",
                         BurgerSize = BurgerSize.Large,
-                        Price = 35,
+                        Price = 35.65m,
                         IsVegetarian = false,
                         IsVegan = false,
                         HasFries = true
@@ -77,16 +82,16 @@ namespace BurgerApp.DataAccess.Data
                         Id = 1,
                         Name = "Quuen St.Burger Shop",
                         Address = "1371 Queen St W",
-                        OpensAt = new TimeSpan(8, 0, 0),
-                        ClosesAt = new TimeSpan(22, 0, 0),
+                        OpensAt = new DateTime(1, 1, 1, 8, 0, 0),
+                        ClosesAt = new DateTime(1, 1, 5, 22, 0, 0),
                     },
                     new Location
                     {
                         Id = 2,
                         Name = "Main St.Burger Shop",
                         Address = "360 Main St",
-                        OpensAt = new TimeSpan(9, 0, 0),
-                        ClosesAt = new TimeSpan(23, 0, 0),
+                        OpensAt = new DateTime(1, 1, 1, 9, 0, 0),
+                        ClosesAt = new DateTime(1, 1, 5, 23, 30, 0),
                     }
                 );
 

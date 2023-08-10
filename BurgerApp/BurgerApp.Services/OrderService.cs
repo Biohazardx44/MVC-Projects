@@ -53,7 +53,7 @@ namespace BurgerApp.Services
         /// Calculates the average price of all orders in the database.
         /// </summary>
         /// <returns>The average order price.</returns>
-        public int AverageOrderPrice()
+        public decimal AverageOrderPrice()
         {
             List<Order> orderDb = _orderRepository.GetAll();
             if (orderDb.Count == 0)
@@ -61,8 +61,8 @@ namespace BurgerApp.Services
                 return 0;
             }
 
-            int totalOrderPrice = orderDb.Sum(x => x.BurgerOrders.Sum(x => x.Burger.Price));
-            int averagePrice = totalOrderPrice / orderDb.Count;
+            decimal totalOrderPrice = orderDb.Sum(x => x.BurgerOrders.Sum(x => x.Burger.Price));
+            decimal averagePrice = totalOrderPrice / orderDb.Count;
 
             return averagePrice;
         }

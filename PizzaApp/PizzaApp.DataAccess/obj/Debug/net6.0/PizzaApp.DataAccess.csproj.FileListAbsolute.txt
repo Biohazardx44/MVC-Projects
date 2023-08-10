@@ -1,0 +1,17 @@
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\bin\Debug\net6.0\PizzaApp.DataAccess.deps.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\bin\Debug\net6.0\PizzaApp.DataAccess.runtimeconfig.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\bin\Debug\net6.0\PizzaApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\bin\Debug\net6.0\PizzaApp.DataAccess.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\bin\Debug\net6.0\PizzaApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\bin\Debug\net6.0\PizzaApp.Domain.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.csproj.AssemblyReference.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.AssemblyInfoInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.AssemblyInfo.cs
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.csproj.CopyComplete
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\refint\PizzaApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.genruntimeconfig.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\ref\PizzaApp.DataAccess.dll

@@ -1,0 +1,17 @@
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.Mappers.deps.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.Mappers.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.Mappers.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.ViewModels.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.Domain.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\bin\Debug\net6.0\PizzaApp.ViewModels.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.csproj.AssemblyReference.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.AssemblyInfoInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.AssemblyInfo.cs
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.csproj.CoreCompileInputs.cache
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.csproj.CopyComplete
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\refint\PizzaApp.Mappers.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.pdb
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\ref\PizzaApp.Mappers.dll
