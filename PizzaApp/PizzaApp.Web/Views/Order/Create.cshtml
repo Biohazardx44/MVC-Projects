@@ -1,32 +1,40 @@
 ﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "Create Order";
+}
 
-<h3>Create order:</h3>
+<h2 class="fade-in">@ViewData["Title"]:</h2>
 
-<div class="row">
+<div class="row fade-in">
     <div class="col-md-6">
         <form asp-action="Create" method="post">
+            <input type="hidden" asp-for="Id" />
 
             <div class="form-group">
                 <label asp-for="Location" class="custom-control-label"></label>
-                <input type="text" asp-for="Location" class="form-control" />
+                <input type="text" asp-for="Location" class="form-control custom-input" />
+                <span asp-validation-for="Location" class="text-danger"></span>
             </div>
 
             <div class="form-group">
-                <label asp-for="PaymentMethod" class="control-label"></label>
-                <select class="form-control" asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()"></select>
+                <label asp-for="PaymentMethod" class="control-label"></label><br />
+                <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()" class="custom-input"></select>
             </div>
 
             <div class="form-group">
-                <label asp-for="Delivered" class="control-label"></label>
-                <input type="checkbox" asp-for="Delivered" />
+                <label asp-for="UserId" class="control-label"></label><br />
+                <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "FullName"))" class="custom-input"></select>
             </div>
 
+            <br />
             <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "FullName"))"></select>
+                <input type="checkbox" asp-for="IsDelivered" class="custom-checkbox" />
+                <label asp-for="IsDelivered" class="control-label"></label>
             </div>
 
-            <button type="submit" class="btn btn-outline-success">Create</button>
+            <hr />
+            <button type="submit" class="btn btn-outline-dark">Create Order</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
         </form>
     </div>
 </div>

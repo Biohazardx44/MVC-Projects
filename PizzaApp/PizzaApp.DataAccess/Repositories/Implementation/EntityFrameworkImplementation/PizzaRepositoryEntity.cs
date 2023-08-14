@@ -13,6 +13,10 @@ namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImpleme
             _pizzaAppDbContext = pizzaAppDbContext;
         }
 
+        /// <summary>
+        /// Deletes a pizza with the specified ID from the database.
+        /// </summary>
+        /// <param name="id">The ID of the pizza to delete.</param>
         public void DeleteById(int id)
         {
             Pizza pizzaDb = _pizzaAppDbContext.Pizzas.FirstOrDefault(pizza => pizza.Id == id);
@@ -26,27 +30,49 @@ namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImpleme
             _pizzaAppDbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Gets a list of all pizzas from the database.
+        /// </summary>
+        /// <returns>A list of all pizzas.</returns>
         public List<Pizza> GetAll()
         {
             return _pizzaAppDbContext.Pizzas.ToList();
         }
 
+        /// <summary>
+        /// Gets a pizza by its ID from the database.
+        /// </summary>
+        /// <param name="id">The ID of the pizza to retrieve.</param>
+        /// <returns>The pizza with the specified ID, or null if not found.</returns>
         public Pizza GetById(int id)
         {
             return _pizzaAppDbContext.Pizzas.FirstOrDefault(x => x.Id == id);
         }
 
+        /// <summary>
+        /// Retrieves a pizza that is currently on promotion from the database.
+        /// </summary>
+        /// <returns>The pizza object that is on promotion, or null if none are found.</returns>
         public Pizza GetPizzaOnPromotion()
         {
             return _pizzaAppDbContext.Pizzas.FirstOrDefault(x => x.IsOnPromotion);
         }
 
+        /// <summary>
+        /// Inserts a new pizza into the database.
+        /// </summary>
+        /// <param name="entity">The pizza to insert.</param>
+        /// <returns>The ID of the newly inserted pizza.</returns>
         public int Insert(Pizza entity)
         {
             _pizzaAppDbContext.Pizzas.Add(entity);
             return _pizzaAppDbContext.SaveChanges();
         }
 
+        /// <summary>
+        /// Updates an existing pizza in the database.
+        /// </summary>
+        /// <param name="entity">The pizza to update.</param>
         public void Update(Pizza entity)
         {
             _pizzaAppDbContext.Pizzas.Update(entity);

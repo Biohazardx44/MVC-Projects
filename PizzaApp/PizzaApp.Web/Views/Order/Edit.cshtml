@@ -1,28 +1,58 @@
 ﻿@model OrderViewModel
+@{
+    ViewData["Title"] = "Edit Order";
+}
 
-<h3>Edit order:</h3>
+<h2 class="fade-in">@ViewData["Title"]:</h2>
 
-<div class="row">
+<div class="row fade-in">
     <div class="col-md-6">
         <form asp-action="Edit" method="post">
             <input type="hidden" asp-for="Id" />
+
             <div class="form-group">
                 <label asp-for="Location" class="custom-control-label"></label>
-                <input type="text" asp-for="Location" class="form-control" />
+                <input type="text" asp-for="Location" class="form-control custom-input" />
+                <span asp-validation-for="Location" class="text-danger"></span>
             </div>
+
             <div class="form-group">
                 <label asp-for="PaymentMethod" class="control-label"></label>
-                <select class="form-control" asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()"></select>
+                <select asp-for="PaymentMethod" asp-items="Html.GetEnumSelectList<PaymentMethod>()" class="custom-input"></select>
             </div>
+
             <div class="form-group">
-                <label asp-for="Delivered" class="control-label"></label>
-                <input type="checkbox" asp-for="Delivered" />
+                <label asp-for="UserId" class="control-label"></label><br />
+                <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "FullName"))" class="custom-input"></select>
             </div>
+
             <div class="form-group">
-                <label asp-for="UserId" class="control-label"></label>
-                <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "FullName"))"></select>
+                <input type="checkbox" asp-for="IsDelivered" class="custom-checkbox" />
+                <label asp-for="IsDelivered" class="control-label"></label>
             </div>
-            <button type="submit" class="btn btn-outline-success">Update</button>
+
+            <br />
+            <a asp-action="AddPizzaToEdit" asp-route-id="@Model.Id" class="btn btn-outline-success">Add Pizza</a>
+            <a asp-action="DeletePizzaFromEdit" asp-route-id="@Model.Id" class="btn btn-outline-danger">Remove Pizza</a>
+
+            <h5>List of Pizzas:</h5>
+            @if (Model.PizzaNames != null && Model.PizzaNames.Count > 0)
+            {
+                <ul>
+                    @foreach (var group in Model.PizzaNames.GroupBy(x => x))
+                    {
+                        <li>@group.Key - @group.Count()</li>
+                    }
+                </ul>
+            }
+            else
+            {
+                <p>No pizzas added to this order!</p>
+            }
+
+            <hr />
+            <button type="submit" class="btn btn-outline-dark">Update Order</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
         </form>
     </div>
 </div>

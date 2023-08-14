@@ -12,6 +12,10 @@ namespace PizzaApp.Helpers
 {
     public static class DependencyInjectionHelper
     {
+        /// <summary>
+        /// Injects the application's services into the dependency injection container.
+        /// </summary>
+        /// <param name="services">The IServiceCollection to add the services to.</param>
         public static void InjectServices(this IServiceCollection services)
         {
             services.AddTransient<IOrderService, OrderService>();
@@ -19,19 +23,28 @@ namespace PizzaApp.Helpers
             services.AddTransient<IPizzaService, PizzaService>();
         }
 
+        /// <summary>
+        /// Injects the application's repositories into the dependency injection container.
+        /// </summary>
+        /// <param name="services">The IServiceCollection to add the repositories to.</param>
         public static void InjectRepositories(this IServiceCollection services)
         {
-            //static db
+            // StaticDb
             services.AddTransient<IRepository<Order>, OrderRepository>();
             services.AddTransient<IRepository<User>, UserRepository>();
             services.AddTransient<IPizzaRepository, PizzaRepository>();
 
-            // entity framework
+            // Entity Framework
             //services.AddTransient<IRepository<Order>, OrderRepositoryEntity>();
             //services.AddTransient<IRepository<User>, UserRepositoryEntity>();
             //services.AddTransient<IPizzaRepository, PizzaRepositoryEntity>();
         }
 
+        /// <summary>
+        /// Injects the application's DbContext into the dependency injection container.
+        /// </summary>
+        /// <param name="services">The IServiceCollection to add the DbContext to.</param>
+        /// <param name="connectionString">The connection string to the database.</param>
         public static void InjectDbContext(this IServiceCollection services, string connectionString)
         {
             services.AddDbContext<PizzaAppDbContext>(options =>

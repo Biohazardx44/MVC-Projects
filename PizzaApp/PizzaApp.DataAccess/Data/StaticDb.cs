@@ -3,6 +3,9 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Data
 {
+    /// <summary>
+    /// A static class representing a simple in-memory database for the PizzaApp application.
+    /// </summary>
     public static class StaticDb
     {
         public static int PizzaId { get; set; }
@@ -12,6 +15,7 @@ namespace PizzaApp.DataAccess.Data
         public static List<Order> Orders { get; set; }
         public static List<User> Users { get; set; }
 
+        // Static constructor to initialize the database with sample data
         static StaticDb()
         {
             PizzaId = 3;
@@ -23,7 +27,7 @@ namespace PizzaApp.DataAccess.Data
                 new Pizza
                 {
                     Id = 1,
-                    Name ="Kaprichioza",
+                    Name ="Capricciosa",
                     IsOnPromotion = true,
                     PizzaOrders = new List<PizzaOrder> {}
                 },
@@ -37,7 +41,7 @@ namespace PizzaApp.DataAccess.Data
                 new Pizza
                 {
                     Id = 3,
-                    Name="Margarita",
+                    Name="Margherita",
                     IsOnPromotion = false,
                     PizzaOrders = new List<PizzaOrder> {}
                 },
@@ -48,17 +52,17 @@ namespace PizzaApp.DataAccess.Data
                 new User
                 {
                     Id = 1,
-                    FirstName = "Bob",
-                    LastName = "Bobsky",
-                    Address = "Bob Street 22",
+                    FirstName = "Arianna",
+                    LastName = "Funk",
+                    Address = "796 Main St",
                     Orders = new List<Order> {}
                 },
                 new User
                 {
                     Id = 2,
-                    FirstName = "Jill",
-                    LastName = "Wayne",
-                    Address = "Wayne Street 33",
+                    FirstName = "Juana",
+                    LastName = "Schmeler",
+                    Address = "2600 S Rd",
                     Orders = new List<Order> {}
                 }
             };
@@ -69,20 +73,20 @@ namespace PizzaApp.DataAccess.Data
                 {
                     Id = 1,
                     PaymentMethod = PaymentMethod.Card,
-                    Delivered = true,
-                    Location = "Store1",
+                    IsDelivered = true,
+                    Location = "Krispy Store",
                     PizzaOrders = new List<PizzaOrder>
                     {
                         new PizzaOrder
-                        {   Id=1,
+                        {   Id = 1,
                             Pizza = Pizzas[0],
                             PizzaId = Pizzas[0].Id,
-                            PizzaSize = PizzaSize.Standard,
+                            PizzaSize = PizzaSize.Small,
                             OrderId = 1
                         },
                         new PizzaOrder
                         {
-                            Id=2,
+                            Id = 2,
                             Pizza = Pizzas[1],
                             PizzaId = Pizzas[1].Id,
                             PizzaSize = PizzaSize.Family,
@@ -95,16 +99,16 @@ namespace PizzaApp.DataAccess.Data
                 {
                     Id = 2,
                     PaymentMethod = PaymentMethod.Cash,
-                    Delivered = false,
-                    Location = "Store2",
+                    IsDelivered = false,
+                    Location = "Glamful Store",
                     PizzaOrders = new List<PizzaOrder>
                     {
                         new PizzaOrder
                         {
-                            Id=3,
+                            Id = 3,
                             Pizza = Pizzas[1],
                             PizzaId = Pizzas[1].Id,
-                            PizzaSize = PizzaSize.Standard,
+                            PizzaSize = PizzaSize.Medium,
                             OrderId  = 2
                         }
                     },

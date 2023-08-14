@@ -19,4 +19,8 @@
     <ProjectReference Include="..\PizzaApp.ViewModels\PizzaApp.ViewModels.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+
 </Project>

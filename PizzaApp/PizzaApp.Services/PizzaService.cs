@@ -15,15 +15,31 @@ namespace PizzaApp.Services
             _pizzaRepository = pizzaRepository;
         }
 
+        /// <summary>
+        /// Retrieves a list of pizza view models for use in dropdowns.
+        /// </summary>
+        /// <returns>A list of pizza view models.</returns>
         public List<PizzaViewModel> GetPizzasForDropdown()
         {
             List<Pizza> pizzasDb = _pizzaRepository.GetAll();
             return pizzasDb.Select(x => x.MapToPizzaViewModel()).ToList();
         }
 
-        public string GetPizzaNameOnPromotion()
+        /// <summary>
+        /// Retrieves the names of pizzas currently on promotion.
+        /// </summary>
+        /// <returns>A comma-separated string containing the names of promotion pizzas,
+        /// or a message indicating no promotion pizzas are found.</returns>
+        public string GetPizzaNamesOnPromotion()
         {
-            return _pizzaRepository.GetPizzaOnPromotion().Name;
+            List<Pizza> promotionPizzas = _pizzaRepository.GetAll().Where(x => x.IsOnPromotion).ToList();
+            if (promotionPizzas.Count > 0)
+            {
+                string pizzaNames = string.Join(", ", promotionPizzas.Select(x => x.Name));
+                return pizzaNames;
+            }
+
+            return "No pizzas currently on promotion :(";
         }
     }
 }

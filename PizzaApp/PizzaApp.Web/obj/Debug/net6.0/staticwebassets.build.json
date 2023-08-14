@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "RZTrUV0Tax1O8k+pihrVz7QvHnzmqon3PJkLiYcSjDE=",
+  "Hash": "5UhtGjeo1+cuiLwfmicMXasjBZemB0xiBRYpyDcfoe8=",
   "Source": "PizzaApp.Web",
   "BasePath": "_content/PizzaApp.Web",
   "Mode": "Default",
@@ -83,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\images\\default-pizza.webp",
+      "SourceId": "PizzaApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\",
+      "BasePath": "_content/PizzaApp.Web",
+      "RelativePath": "images/default-pizza.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\default-pizza.webp"
+    },
+    {
+      "Identity": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\images\\pizza-shop-logo.png",
+      "SourceId": "PizzaApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\",
+      "BasePath": "_content/PizzaApp.Web",
+      "RelativePath": "images/pizza-shop-logo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pizza-shop-logo.png"
     },
     {
       "Identity": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\js\\site.js",

@@ -1,11 +1,17 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HomeIndexViewModel
+@{
+    ViewData["Title"] = "Home";
 }
 
-@model HomeIndexViewModel
+<div class="text-center slide-in-left">
+    <h1 class="display-4">Welcome to our<br /><strong>Pizza Shop</strong></h1>
 
-<div class="jumbotron">
-    <h1>Welcome to our pizza app!</h1>
-    <h3>Today on promotion: @Model.PizzaOnPromotion</h3>
-    <h4>We are popular! We have already had @Model.OrderCount orders! </h4>
+    <br />
+    <h4>
+        So far we have @Model.OrderCount order@((Model.OrderCount != 1) ? "s" : "")!
+        @((Model.OrderCount > 1) ? "Amazing, let's keep it up! :)" : (Model.OrderCount == 1) ? "At least it's something! :|" : "Nothing? Aww! :(")
+    </h4>
+
+    <br />
+    <h4>Today On Promotion: @Model.PizzasOnPromotion</h4>
 </div>

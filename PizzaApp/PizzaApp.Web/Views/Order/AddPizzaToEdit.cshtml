@@ -1,0 +1,26 @@
+﻿@model PizzaOrderViewModel
+@{
+    ViewData["Title"] = "Add Pizza";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">@ViewData["Title"]</h2>
+
+    <form asp-action="AddPizzaToEdit" method="post">
+        <input type="hidden" asp-for="OrderId" />
+
+        <div class="form-group">
+            <label asp-for="PizzaId" class="custom-control-label"></label>
+            <select class="form-control custom-input w-50" asp-for="PizzaId" asp-items="@(new SelectList(ViewBag.Pizzas, "Id", "Name"))"></select>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="PizzaSize" class="custom-control-label"></label>
+            <select class="form-control custom-input w-50" asp-for="PizzaSize" asp-items="Html.GetEnumSelectList<PizzaSize>()"></select>
+        </div>
+
+        <hr class="w-50" />
+        <button class="btn btn-outline-success">Add Pizza</button>
+        <a asp-action="Edit" asp-route-id="@Model.OrderId" class="btn btn-outline-danger">Cancel</a>
+    </form>
+</div>

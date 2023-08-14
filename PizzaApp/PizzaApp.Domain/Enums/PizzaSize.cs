@@ -2,7 +2,9 @@
 {
     public enum PizzaSize
     {
-        Standard = 1,
-        Family = 2,
+        Small = 1,
+        Medium = 2,
+        Large = 3,
+        Family = 4,
     }
 }

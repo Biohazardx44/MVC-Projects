@@ -5,6 +5,6 @@ namespace PizzaApp.Services.Abstraction
     public interface IPizzaService
     {
         List<PizzaViewModel> GetPizzasForDropdown();
-        string GetPizzaNameOnPromotion();
+        string GetPizzaNamesOnPromotion();
     }
 }

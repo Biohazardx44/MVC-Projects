@@ -21,12 +21,36 @@ namespace PizzaApp.Services
             _pizzaRepository = pizzaRepository;
         }
 
-        public List<OrderListViewModel> GetAllOrders()
+        /// <summary>
+        /// Adds a pizza to an existing order.
+        /// </summary>
+        /// <param name="pizzaOrderViewModel">The view model containing the pizza order details.</param>
+        public void AddPizzaToEdit(PizzaOrderViewModel pizzaOrderViewModel)
         {
-            List<Order> dbOrders = _orderRepository.GetAll();
-            return dbOrders.Select(order => order.MapToOrderListViewModel()).ToList();
+            var pizzaDb = _pizzaRepository.GetById(pizzaOrderViewModel.PizzaId);
+            if (pizzaDb == null)
+            {
+                throw new Exception($"Pizza with id {pizzaOrderViewModel.PizzaId} was not found");
+            }
+
+            var orderDb = _orderRepository.GetById(pizzaOrderViewModel.OrderId);
+            if (orderDb == null)
+            {
+                throw new Exception($"Order with id {pizzaOrderViewModel.OrderId} was not found");
+            }
+
+            orderDb.PizzaOrders ??= new List<PizzaOrder>();
+
+            var pizzaOrder = pizzaOrderViewModel.MapToPizzaOrder(pizzaDb, orderDb);
+            orderDb.PizzaOrders.Add(pizzaOrder);
+
+            _orderRepository.Update(orderDb);
         }
 
+        /// <summary>
+        /// Creates a new order in the database.
+        /// </summary>
+        /// <param name="orderViewModel">The view model containing the order details.</param>
         public void CreateOrder(OrderViewModel orderViewModel)
         {
             User userDb = _userRepository.GetById(orderViewModel.UserId);
@@ -42,10 +66,37 @@ namespace PizzaApp.Services
             int newOrderId = _orderRepository.Insert(order);
             if (newOrderId <= 0)
             {
-                throw new Exception("An error occured while saving to db");
+                throw new Exception("An error occurred while saving to the database!");
             }
         }
 
+        /// <summary>
+        /// Deletes a pizza from an existing order in the database.
+        /// </summary>
+        /// <param name="pizzaOrderViewModel">The view model containing the pizza order details.</param>
+        public void DeletePizzaFromEdit(PizzaOrderViewModel pizzaOrderViewModel)
+        {
+            var orderDb = _orderRepository.GetById(pizzaOrderViewModel.OrderId);
+            if (orderDb == null)
+            {
+                throw new Exception($"Order with id {pizzaOrderViewModel.OrderId} was not found!");
+            }
+
+            var pizzaOrderToRemove = orderDb.PizzaOrders.FirstOrDefault(x => x.PizzaId == pizzaOrderViewModel.PizzaId);
+            if (pizzaOrderToRemove == null)
+            {
+                throw new Exception($"Pizza with id {pizzaOrderViewModel.PizzaId} was not found in the order"!);
+            }
+
+            orderDb.PizzaOrders.Remove(pizzaOrderToRemove);
+
+            _orderRepository.Update(orderDb);
+        }
+
+        /// <summary>
+        /// Deletes an order from the database based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the order to be deleted.</param>
         public void DeleteOrder(int id)
         {
             Order orderDb = _orderRepository.GetById(id);
@@ -56,6 +107,10 @@ namespace PizzaApp.Services
             _orderRepository.DeleteById(id);
         }
 
+        /// <summary>
+        /// Updates an existing order in the database with the new details.
+        /// </summary>
+        /// <param name="orderViewModel">The view model containing the updated order details.</param>
         public void EditOrder(OrderViewModel orderViewModel)
         {
             Order orderDb = _orderRepository.GetById(orderViewModel.Id);
@@ -77,17 +132,21 @@ namespace PizzaApp.Services
             _orderRepository.Update(editedOrder);
         }
 
-        public OrderViewModel GetOrderForEditing(int id)
+        /// <summary>
+        /// Retrieves a list of all orders from the database.
+        /// </summary>
+        /// <returns>A list of order view models.</returns>
+        public List<OrderListViewModel> GetAllOrders()
         {
-            Order orderDb = _orderRepository.GetById(id);
-            if (orderDb == null)
-            {
-                throw new Exception($"The order with id {id} was not found!");
-            }
-
-            return orderDb.MapToOrderViewModel();
+            List<Order> dbOrders = _orderRepository.GetAll();
+            return dbOrders.Select(order => order.MapToOrderListViewModel()).ToList();
         }
 
+        /// <summary>
+        /// Retrieves the details of a specific order from the database based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the order to retrieve.</param>
+        /// <returns>The view model representing the details of the specified order.</returns>
         public OrderDetailsViewModel GetOrderDetails(int id)
         {
             Order orderDb = _orderRepository.GetById(id);
@@ -98,32 +157,20 @@ namespace PizzaApp.Services
             return orderDb.MapToOrderDetailsViewModel();
         }
 
-        public void AddPizzaToOrder(PizzaOrderViewModel pizzaOrderViewModel)
+        /// <summary>
+        /// Retrieves an order view model for editing based on its ID.
+        /// </summary>
+        /// <param name="id">The ID of the order to retrieve for editing.</param>
+        /// <returns>The view model representing the order details for editing.</returns>
+        public OrderViewModel GetOrderForEditing(int id)
         {
-            var pizzaDb = _pizzaRepository.GetById(pizzaOrderViewModel.PizzaId);
-            if (pizzaDb == null)
-            {
-                throw new Exception($"Pizza with id {pizzaOrderViewModel.PizzaId} was not found");
-            }
-
-            var orderDb = _orderRepository.GetById(pizzaOrderViewModel.OrderId);
+            Order orderDb = _orderRepository.GetById(id);
             if (orderDb == null)
             {
-                throw new Exception($"Order with id {pizzaOrderViewModel.OrderId} was not found");
+                throw new Exception($"The order with id {id} was not found!");
             }
 
-            var pizzaOrder = new PizzaOrder
-            {
-                Pizza = pizzaDb,
-                PizzaId = pizzaDb.Id,
-                Order = orderDb,
-                OrderId = orderDb.Id,
-                PizzaSize = pizzaOrderViewModel.PizzaSize
-            };
-
-            orderDb.PizzaOrders.Add(pizzaOrder);
-
-            _orderRepository.Update(orderDb);
+            return orderDb.MapToOrderViewModel();
         }
     }
 }

@@ -10,6 +10,7 @@ namespace PizzaApp.Services.Abstraction
         OrderViewModel GetOrderForEditing(int id);
         void EditOrder(OrderViewModel orderViewModel);
         void DeleteOrder(int id);
-        void AddPizzaToOrder(PizzaOrderViewModel pizzaOrderViewModel);
+        void AddPizzaToEdit(PizzaOrderViewModel pizzaOrderViewModel);
+        void DeletePizzaFromEdit(PizzaOrderViewModel pizzaOrderViewModel);
     }
 }

@@ -1,33 +1,48 @@
 ﻿@model OrderDetailsViewModel
+@{
+    ViewData["Title"] = "Order Details";
+}
 
-<div class="text-center">
-    <h2 class="display-4">Order Details</h2>
-</div>
+<div class="fade-in">
+    <h2 class="bounce">@ViewData["Title"]:</h2>
 
-<br />
-
-<a asp-action="AddPizza" asp-route-id="@Model.Id" class="btn btn-outline-success">Add Pizza</a>
-
-<br />
-
-
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title"><label asp-for="UserFullName"></label>: @Model.UserFullName</h5>
-        <h6 class="card-subtitle mb-2 text-muted"><label asp-for="Location"></label>: @Model.Location</h6>
-        <h6 class="card-subtitle mb-2 text-muted"><label asp-for="PaymentMethod"></label>: @Model.PaymentMethod</h6>
-    </div>
-</div>
-<br />
-
-<div class="row">
-    @foreach (var pizzaName in Model.PizzaNames)
-    {
-        <div class="card" style="width: 18rem; margin-left:15px;">
-            <img class="card-img-top" src="https://alternate-takes.com/wp-content/uploads/2021/05/s2.jpg" alt="Card image cap">
-            <div class="card-body">
-                <h3 class="text-center">@pizzaName</h3>
-            </div>
+    <div class="card main-card">
+        <div class="card-body">
+            <h5 class="card-title"><label asp-for="UserFullName"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.UserFullName</span></h5>
+            <h5 class="card-title"><label asp-for="Location"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.Location</span></h5>
+            <h5 class="card-title"><label asp-for="PaymentMethod"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.PaymentMethod</span></h5>
         </div>
-    }
+    </div>
+
+    <br />
+    <h4>Pizza List:</h4>
+    <div class="row">
+        @if (Model.PizzaNames != null && Model.PizzaNames.Any())
+        {
+            @foreach (var group in Model.PizzaNames.GroupBy(x => x))
+            {
+                <div class="card pizza-list-card">
+                    <img class="card-img-top" src="~/images/default-pizza.webp" alt="Pizza">
+                    <div class="card-body text-center justify-content-center">
+                        <span>@group.Key - @group.Count()</span>
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <p>No pizzas added to this order!</p>
+        }
+    </div>
+
+    <br />
+    <div>
+        <h4 class="card-title"><label asp-for="IsDelivered"></label>:</h4>
+        <strong class="@(Model.IsDelivered ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger")">
+            @(Model.IsDelivered ? "This order has been delivered!" : "This order has not been delivered!")
+        </strong>
+    </div>
+
+    <hr />
+    <a asp-action="Index" class="btn btn-success btn-lg mx-2 w-25">Go Back To Orders</a>
 </div>

@@ -4,6 +4,9 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Data
 {
+    /// <summary>
+    /// Represents the database context for the PizzaApp application, responsible for interacting with the underlying database.
+    /// </summary>
     public class PizzaAppDbContext : DbContext
     {
         public PizzaAppDbContext(DbContextOptions options) : base(options) { }
@@ -12,12 +15,11 @@ namespace PizzaApp.DataAccess.Data
         public DbSet<User> Users { get; set; }
         public DbSet<Pizza> Pizzas { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-            // Defining relations 
+            // Configure entity relationships
             modelBuilder.Entity<Order>()
                 .HasMany(x => x.PizzaOrders)
                 .WithOne(x => x.Order)
@@ -33,13 +35,13 @@ namespace PizzaApp.DataAccess.Data
                 .WithOne(x => x.User)
                 .HasForeignKey(x => x.UserId);
 
-            // Seeding
+            // Seed initial data
             modelBuilder.Entity<Pizza>()
                 .HasData(
                     new Pizza
                     {
                         Id = 1,
-                        Name = "Cappricioza",
+                        Name = "Capricciosa",
                         IsOnPromotion = true
                     },
                     new Pizza
@@ -51,26 +53,26 @@ namespace PizzaApp.DataAccess.Data
                     new Pizza
                     {
                         Id = 3,
-                        Name = "Margarita",
+                        Name = "Margherita",
                         IsOnPromotion = false
                     }
                 );
 
             modelBuilder.Entity<User>()
                 .HasData(
-                new User
-                {
-                    Id = 1,
-                    FirstName = "Bob",
-                    LastName = "Bobsky",
-                    Address = "Bob Street 22"
-                },
+                    new User
+                    {
+                        Id = 1,
+                        FirstName = "Arianna",
+                        LastName = "Funk",
+                        Address = "796 Main St"
+                    },
                     new User
                     {
                         Id = 2,
-                        FirstName = "Jill",
-                        LastName = "Wayne",
-                        Address = "Wayne Street 33"
+                        FirstName = "Juana",
+                        LastName = "Schmeler",
+                        Address = "2600 S Rd"
                     }
                 );
 
@@ -80,44 +82,44 @@ namespace PizzaApp.DataAccess.Data
                     {
                         Id = 1,
                         PaymentMethod = PaymentMethod.Card,
-                        Delivered = true,
-                        Location = "Store1",
+                        IsDelivered = true,
+                        Location = "Krispy Store",
                         UserId = 1
                     },
                     new Order
                     {
                         Id = 2,
                         PaymentMethod = PaymentMethod.Cash,
-                        Delivered = false,
-                        Location = "Store2",
+                        IsDelivered = false,
+                        Location = "Glamful Store",
                         UserId = 2
                     }
                 );
 
             modelBuilder.Entity<PizzaOrder>()
                 .HasData(
-                new PizzaOrder
-                {
-                    Id = 1,
-                    OrderId = 1,
-                    PizzaId = 1,
-                    PizzaSize = PizzaSize.Standard
-                },
-                new PizzaOrder
-                {
-                    Id = 2,
-                    OrderId = 1,
-                    PizzaId = 2,
-                    PizzaSize = PizzaSize.Family
-                },
-                new PizzaOrder
-                {
-                    Id = 3,
-                    OrderId = 2,
-                    PizzaId = 2,
-                    PizzaSize = PizzaSize.Family
-                }
-                 );
+                    new PizzaOrder
+                    {
+                        Id = 1,
+                        OrderId = 1,
+                        PizzaId = 1,
+                        PizzaSize = PizzaSize.Small
+                    },
+                    new PizzaOrder
+                    {
+                        Id = 2,
+                        OrderId = 1,
+                        PizzaId = 2,
+                        PizzaSize = PizzaSize.Family
+                    },
+                    new PizzaOrder
+                    {
+                        Id = 3,
+                        OrderId = 2,
+                        PizzaId = 2,
+                        PizzaSize = PizzaSize.Medium
+                    }
+                );
         }
     }
 }
