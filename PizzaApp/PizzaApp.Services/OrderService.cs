@@ -60,7 +60,8 @@ namespace PizzaApp.Services
                 throw new Exception($"User with id {orderViewModel.UserId} was not found!");
             }
 
-            Order order = orderViewModel.MapToOrder();
+            Order order = new Order();
+            orderViewModel.MapToOrder(order, userDb);
             order.User = userDb;
 
             int newOrderId = _orderRepository.Insert(order);
@@ -125,11 +126,8 @@ namespace PizzaApp.Services
                 throw new Exception($"The user with id {orderViewModel.UserId} was not found!");
             }
 
-            Order editedOrder = orderViewModel.MapToOrder();
-            editedOrder.User = userDb;
-            editedOrder.Id = orderViewModel.Id;
-            editedOrder.PizzaOrders = orderDb.PizzaOrders;
-            _orderRepository.Update(editedOrder);
+            orderViewModel.MapToOrder(orderDb, userDb);
+            _orderRepository.Update(orderDb);
         }
 
         /// <summary>

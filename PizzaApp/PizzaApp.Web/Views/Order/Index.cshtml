@@ -39,7 +39,7 @@
                 <strong>Pizza List:</strong>
                 @if (order.PizzaNames != null && order.PizzaNames.Count > 0)
                 {
-                    <ul class="pizza-list">
+                    <ul>
                         @foreach (var group in order.PizzaNames.GroupBy(x => x))
                         {
                             <li>@group.Key - @group.Count()</li>
@@ -52,9 +52,9 @@
                 }
             </div>
 
-            <div class="text-center">
-                <a asp-controller="Order" asp-action="Details" asp-route-id="@order.Id" class="details-link">See Details</a>
-                <a asp-controller="Order" asp-action="Edit" asp-route-id="@order.Id" class="edit-link">Edit Order</a>
+            <div class="order-links">
+                <a asp-controller="Order" asp-action="Details" asp-route-id="@order.Id" class="details-link">See Details</a><br />
+                <a asp-controller="Order" asp-action="Edit" asp-route-id="@order.Id" class="edit-link">Edit Order</a><br />
                 <a asp-controller="Order" asp-action="Delete" asp-route-id="@order.Id" class="delete-link">Delete Order</a>
             </div>
         </div>

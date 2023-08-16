@@ -73,12 +73,19 @@ namespace PizzaApp.Web.Controllers
         /// <summary>
         /// Action method that handles the HTTP POST request for creating a new order.
         /// It adds the new order to the service and redirects to the "Index" view on success.
+        /// If the model state is invalid, it returns the "Create" view with validation errors.
         /// </summary>
         /// <param name="orderViewModel">The order view model containing the data for the new order.</param>
-        /// <returns>Redirection to "Index" on success, or respective error views.</returns>
+        /// <returns>Redirection to "Index" on success, or "Create" view with errors on failure.</returns>
         [HttpPost]
         public IActionResult Create(OrderViewModel orderViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Users = _userService.GetUsersForDropdown();
+                return View(orderViewModel);
+            }
+
             try
             {
                 _orderService.CreateOrder(orderViewModel);
@@ -124,17 +131,25 @@ namespace PizzaApp.Web.Controllers
         /// <summary>
         /// Action method that handles the HTTP POST request for editing an order.
         /// It receives the edited order data from the "Edit" view and updates the order in the database.
+        /// If the model state is not valid, it returns the "Edit" view with the entered data.
         /// If the update is successful, it redirects to the "Index" view.
         /// If the order with the specified ID is not found, it returns the "ResourceNotFound" view.
         /// </summary>
         /// <param name="orderViewModel">The edited order data from the "Edit" view.</param>
         /// <returns>
         /// If successful, redirects to the "Index" view.
+        /// If model state is invalid, returns the "Edit" view with entered data.
         /// If the order with the specified ID is not found, returns the "ResourceNotFound" view.
         /// </returns>
         [HttpPost]
         public IActionResult Edit(OrderViewModel orderViewModel)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Users = _userService.GetUsersForDropdown();
+                return View(orderViewModel);
+            }
+
             try
             {
                 _orderService.EditOrder(orderViewModel);

@@ -29,6 +29,7 @@ namespace PizzaApp.DataAccess.Data
                     Id = 1,
                     Name ="Capricciosa",
                     IsOnPromotion = true,
+                    PizzaSize = PizzaSize.Small,
                     PizzaOrders = new List<PizzaOrder> {}
                 },
                 new Pizza
@@ -36,6 +37,7 @@ namespace PizzaApp.DataAccess.Data
                     Id = 2,
                     Name = "Pepperoni",
                     IsOnPromotion = false,
+                    PizzaSize = PizzaSize.Medium,
                     PizzaOrders = new List<PizzaOrder> {}
                 },
                 new Pizza
@@ -43,6 +45,7 @@ namespace PizzaApp.DataAccess.Data
                     Id = 3,
                     Name="Margherita",
                     IsOnPromotion = false,
+                    PizzaSize= PizzaSize.Large,
                     PizzaOrders = new List<PizzaOrder> {}
                 },
             };
@@ -81,7 +84,6 @@ namespace PizzaApp.DataAccess.Data
                         {   Id = 1,
                             Pizza = Pizzas[0],
                             PizzaId = Pizzas[0].Id,
-                            PizzaSize = PizzaSize.Small,
                             OrderId = 1
                         },
                         new PizzaOrder
@@ -89,7 +91,6 @@ namespace PizzaApp.DataAccess.Data
                             Id = 2,
                             Pizza = Pizzas[1],
                             PizzaId = Pizzas[1].Id,
-                            PizzaSize = PizzaSize.Family,
                             OrderId = 1
                         }
                     },
@@ -108,7 +109,6 @@ namespace PizzaApp.DataAccess.Data
                             Id = 3,
                             Pizza = Pizzas[1],
                             PizzaId = Pizzas[1].Id,
-                            PizzaSize = PizzaSize.Medium,
                             OrderId  = 2
                         }
                     },

@@ -11,7 +11,6 @@ namespace PizzaApp.Mappers.Extensions
             {
                 Pizza = pizzaDb,
                 PizzaId = pizzaDb.Id,
-                PizzaSize = pizzaDb.PizzaSize,
                 Order = orderDb,
                 OrderId = orderDb.Id,
             };

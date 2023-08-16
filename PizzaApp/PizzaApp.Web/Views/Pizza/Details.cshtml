@@ -1,0 +1,26 @@
+﻿@model PizzaDetailsViewModel
+@{
+    ViewData["Title"] = "Pizza Details";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">@ViewData["Title"]:</h2>
+
+    <div class="card main-card">
+        <div class="card-body">
+            <h5 class="card-title"><label asp-for="Name"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Name</span></h5>
+            <h5 class="card-title"><label asp-for="PizzaSize"></label>: <span class="card-subtitle mb-2 text-muted">@Model.PizzaSize</span></h5>
+        </div>
+    </div>
+
+    <br />
+    <div>
+        <h4 class="card-title"><label asp-for="IsOnPromotion"></label>:</h4>
+        <strong class="@(Model.IsOnPromotion ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger")">
+            @(Model.IsOnPromotion ? "This pizza is on promotion!" : "This pizza is not on promotion!")
+        </strong>
+    </div>
+
+    <hr />
+    <a asp-action="Index" class="btn btn-outline-dark btn-lg">Go Back To Pizzas</a>
+</div>

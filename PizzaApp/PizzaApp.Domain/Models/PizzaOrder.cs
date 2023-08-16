@@ -8,6 +8,5 @@ namespace PizzaApp.Domain.Models
         public int PizzaId { get; set; }
         public Order Order { get; set; }
         public int OrderId { get; set; }
-        public PizzaSize PizzaSize { get; set; }
     }
 }

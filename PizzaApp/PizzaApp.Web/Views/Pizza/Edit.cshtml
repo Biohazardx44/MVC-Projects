@@ -1,0 +1,35 @@
+﻿@model PizzaViewModel
+@{
+    ViewData["Title"] = "Edit Pizza";
+}
+
+<h2 class="fade-in">@ViewData["Title"]:</h2>
+
+<div class="row fade-in">
+    <div class="col-md-6">
+        <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="Id" />
+
+            <div class="form-group">
+                <label asp-for="Name" class="custom-control-label"></label>
+                <input type="text" asp-for="Name" class="form-control custom-input" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PizzaSize" class="control-label"></label>
+                <select class="form-control custom-input" asp-for="PizzaSize" asp-items="Html.GetEnumSelectList<PizzaSize>()"></select>
+            </div>
+
+            <br />
+            <div class="form-group">
+                <input type="checkbox" asp-for="IsOnPromotion" class="custom-checkbox" />
+                <label asp-for="IsOnPromotion" class="control-label"></label>
+            </div>
+
+            <hr />
+            <button type="submit" class="btn btn-outline-dark">Update Pizza</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Cancel</a>
+        </form>
+    </div>
+</div>

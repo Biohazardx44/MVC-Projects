@@ -42,19 +42,22 @@ namespace PizzaApp.DataAccess.Data
                     {
                         Id = 1,
                         Name = "Capricciosa",
-                        IsOnPromotion = true
+                        IsOnPromotion = true,
+                        PizzaSize = PizzaSize.Small,
                     },
                     new Pizza
                     {
                         Id = 2,
                         Name = "Pepperoni",
-                        IsOnPromotion = false
+                        IsOnPromotion = false,
+                        PizzaSize = PizzaSize.Medium,
                     },
                     new Pizza
                     {
                         Id = 3,
                         Name = "Margherita",
-                        IsOnPromotion = false
+                        IsOnPromotion = false,
+                        PizzaSize = PizzaSize.Large,
                     }
                 );
 
@@ -103,21 +106,18 @@ namespace PizzaApp.DataAccess.Data
                         Id = 1,
                         OrderId = 1,
                         PizzaId = 1,
-                        PizzaSize = PizzaSize.Small
                     },
                     new PizzaOrder
                     {
                         Id = 2,
                         OrderId = 1,
                         PizzaId = 2,
-                        PizzaSize = PizzaSize.Family
                     },
                     new PizzaOrder
                     {
                         Id = 3,
                         OrderId = 2,
                         PizzaId = 2,
-                        PizzaSize = PizzaSize.Medium
                     }
                 );
         }

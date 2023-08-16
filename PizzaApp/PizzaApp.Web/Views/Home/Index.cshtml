@@ -13,5 +13,54 @@
     </h4>
 
     <br />
-    <h4>Today On Promotion: @Model.PizzasOnPromotion</h4>
+    <h4>Today On Promotion:</h4>
+    @if (Model.PizzasOnPromotion != null && Model.PizzasOnPromotion.Any())
+    {
+        <ul class="pizza-list">
+            @foreach (var pizzaName in Model.PizzasOnPromotion)
+            {
+                <li>@pizzaName</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="no-promotion-message">No pizzas currently on promotion :(</p>
+    }
 </div>
+
+<!-- Button for mobile -->
+<div class="d-md d-flex justify-content-center">
+    <button type="button" class="btn pulse-button" id="openModalBtnMobile">
+        PIZZA PROMOTION
+    </button>
+</div>
+
+<!-- Button for desktop -->
+<div class="d-none d-md">
+    <button type="button" class="btn pulse-button" id="openModalBtnDesktop">
+        PIZZA PROMOTION
+    </button>
+</div>
+
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">50% Off Pizza Promotion 🍕🎉</h4>
+                <button type="button" class="close" id="closeModalBtn">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <p>Exclusive Offer! Don't Miss Out!</p>
+                <p>Craving pizza? We've got a mouthwatering deal just for you! Enjoy a fantastic 50% off on any pizza of your choice for a limited time only.</p>
+                <p>Experience the perfect blend of flavors and indulge in our delicious pizzas that are freshly made to perfection. Whether you're a fan of classic Margherita, loaded Pepperoni, or the savory Capricciosa, this promotion has you covered.</p>
+                <img src="~/images/pizza-special-promotion.jpg" alt="Pizza Promotion" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="./js/site.js"></script>
+}

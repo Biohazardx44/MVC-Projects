@@ -26,6 +26,7 @@
                 <select asp-for="UserId" asp-items="@(new SelectList(ViewBag.Users, "Id", "FullName"))" class="custom-input"></select>
             </div>
 
+            <br />
             <div class="form-group">
                 <input type="checkbox" asp-for="IsDelivered" class="custom-checkbox" />
                 <label asp-for="IsDelivered" class="control-label"></label>

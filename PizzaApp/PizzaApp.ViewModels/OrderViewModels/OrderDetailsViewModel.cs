@@ -16,5 +16,6 @@ namespace PizzaApp.ViewModels.OrderViewModels
         public string UserFullName { get; set; } = string.Empty;
         [Display(Name = "Pizzas")]
         public List<string> PizzaNames { get; set; }
+        public List<PizzaSize> PizzaSizes { get; set; }
     }
 }

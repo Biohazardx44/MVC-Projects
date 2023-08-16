@@ -1,18 +1,354 @@
-html {
-  font-size: 14px;
+:root {
+    --primary-white: #ffffff;
+    --primary-black: #000000;
+    --primary-gray: #d0d0d0;
+    --primary-red: #cc0000;
+    --secondary-red: #990000;
+    --primary-green: #0edf0e;
+    --secondary-green: #048504;
+    --primary-link-color: #f8f459;
+    --secondary-link-color: #f56523;
+    --main-card-color: #f0f0f0;
+    --background-color: #ffb248;
+    --border-color: #353535;
+    --navbar-background-color: #c77d17;
+    --footer-background-color: #ef9e2e;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
 html {
-  position: relative;
-  min-height: 100%;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    background-color: var(--background-color);
+    margin-bottom: 60px;
+}
+
+.navbar {
+    background-color: var(--navbar-background-color) !important;
+}
+
+.footer {
+    background-color: var(--footer-background-color);
+}
+
+.img-thumbnail {
+    border: 2px solid var(--primary-black);
+}
+
+.navbar-nav .nav-link {
+    margin: 10px 0 0 0;
+    font-weight: bold;
+    border: 1px solid var(--primary-black);
+    border-radius: 10px;
+    background-color: var(--primary-red);
+    text-align: center;
+}
+
+    .navbar-nav .nav-link:hover {
+        color: var(--primary-white) !important;
+        background-color: var(--secondary-red);
+    }
+
+.navbar-toggler {
+    border: 1px solid var(--primary-black) !important;
+}
+
+.container {
+    color: var(--primary-black);
+}
+
+.custom-input {
+    background-color: var(--main-card-color);
+    border: 1px solid var(--primary-black);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+
+    .custom-input::placeholder {
+        color: var(--primary-white);
+    }
+
+    .custom-input:focus {
+        outline: none;
+        box-shadow: 0 2px 4px var(--primary-black);
+    }
+
+.custom-checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-black);
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+    .custom-checkbox:checked {
+        background-color: var(--primary-green);
+        border-color: var(--secondary-green);
+    }
+
+.main-card {
+    background-color: var(--main-card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px var(--primary-black);
+}
+
+.order-card {
+    border: 3px solid var(--border-color);
+    max-width: 21rem;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .order-card .card-header {
+        background-color: var(--primary-gray);
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .order-card .card-body,
+    .pizza-card .card-body {
+        padding: 10px;
+    }
+
+    .order-card .order-info {
+        margin-bottom: 10px;
+    }
+
+        .order-card .order-info strong {
+            display: block;
+            font-weight: bold;
+        }
+
+    .order-card .order-links {
+        margin-bottom: 10px;
+    }
+
+    .order-card .edit-link,
+    .order-card .delete-link,
+    .order-card .details-link,
+    .pizza-card .edit-link,
+    .pizza-card .delete-link,
+    .pizza-card .details-link {
+        color: var(--primary-black);
+        text-decoration: underline;
+        margin: 5px 0;
+        display: inline;
+        padding: 5px 0;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        .order-card .edit-link:hover,
+        .order-card .delete-link:hover,
+        .order-card .details-link:hover {
+            color: var(--primary-link-color);
+        }
+
+        .pizza-card .edit-link:hover,
+        .pizza-card .delete-link:hover,
+        .pizza-card .details-link:hover {
+            color: var(--secondary-link-color);
+        }
+
+.pizza-card {
+    background-color: var(--primary-gray);
+    border: 3px solid var(--border-color);
+    max-width: 21rem;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .pizza-card .card-header {
+        color: var(--primary-white);
+        background-color: var(--secondary-red);
+        padding: 10px;
+        font-weight: bold;
+        border-radius: 0 0 10px 10px;
+    }
+
+    .pizza-card .pizza-links {
+        margin: 10px 0;
+    }
+
+.pizza-list-card {
+    width: 13rem;
+    border: 1px solid var(--primary-black);
+    border-radius: 5px;
+    background-color: var(--main-card-color);
+    margin: 0 0 5px 5px;
+}
+
+    .pizza-list-card .card-body {
+        padding: 10px;
+    }
+
+    .pizza-list-card div span {
+        font-weight: bold;
+    }
+
+.details-list-card {
+    width: 26rem;
+}
+
+    .details-list-card img {
+        margin: 10px 0 0 0;
+        border: 1px solid var(--primary-black);
+        border-radius: 10px;
+        box-shadow: 0 2px 2px var(--primary-black);
+    }
+
+    .details-list-card div span {
+        font-weight: bold;
+    }
+
+.no-promotion-message {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.pizza-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .pizza-list li {
+        font-size: 1.5rem;
+    }
+
+.d-md {
+    display: block;
+    margin: 0 auto;
+    margin-top: 3rem;
+    z-index: 1000;
+}
+
+.pulse-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: var(--primary-red);
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+    .pulse-button:hover {
+        color: var(--primary-white);
+        background-color: var(--secondary-red);
+    }
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bounce {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.bounce-in {
+    animation: bounceIn 1s ease-in-out;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    80% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.slide-in-left {
+    animation: slideInLeft 1s ease-in-out forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+
+    .d-none {
+        display: none;
+    }
+
+    .navbar-nav .nav-link {
+        width: 8rem;
+        margin: 0 10px 0 0;
+    }
+
+    .order-card,
+    .pizza-card {
+        max-width: 19.2rem;
+    }
 }

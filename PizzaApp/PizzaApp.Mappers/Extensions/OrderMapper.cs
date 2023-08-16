@@ -5,16 +5,12 @@ namespace PizzaApp.Mappers.Extensions
 {
     public static class OrderMapper
     {
-        public static Order MapToOrder(this OrderViewModel orderViewModel)
+        public static void MapToOrder(this OrderViewModel orderViewModel, Order order, User user)
         {
-            return new Order
-            {
-                IsDelivered = orderViewModel.IsDelivered,
-                Location = orderViewModel.Location,
-                PaymentMethod = orderViewModel.PaymentMethod,
-                PizzaOrders = new List<PizzaOrder>(),
-                UserId = orderViewModel.UserId
-            };
+            order.IsDelivered = orderViewModel.IsDelivered;
+            order.Location = orderViewModel.Location;
+            order.PaymentMethod = orderViewModel.PaymentMethod;
+            order.User = user;
         }
 
         public static OrderViewModel MapToOrderViewModel(this Order order)
@@ -25,7 +21,7 @@ namespace PizzaApp.Mappers.Extensions
                 IsDelivered = order.IsDelivered,
                 Location = order.Location,
                 PaymentMethod = order.PaymentMethod,
-                PizzaNames = order.PizzaOrders.Select(x => x.Pizza.Name).ToList(),
+                PizzaNames = order.PizzaOrders?.Select(x => x.Pizza.Name).ToList(),
                 UserId = order.UserId
             };
         }
@@ -37,7 +33,7 @@ namespace PizzaApp.Mappers.Extensions
                 Id = order.Id,
                 IsDelivered = order.IsDelivered,
                 UserFullName = $"{order.User.FirstName} {order.User.LastName}",
-                PizzaNames = order.PizzaOrders.Select(x => x.Pizza.Name).ToList()
+                PizzaNames = order.PizzaOrders?.Select(x => x.Pizza.Name).ToList()
             };
         }
 
@@ -49,7 +45,8 @@ namespace PizzaApp.Mappers.Extensions
                 PaymentMethod = order.PaymentMethod,
                 Location = order.Location,
                 UserFullName = $"{order.User.FirstName} {order.User.LastName}",
-                PizzaNames = order.PizzaOrders.Select(x => x.Pizza.Name).ToList(),
+                PizzaNames = order.PizzaOrders?.Select(x => x.Pizza.Name).ToList(),
+                PizzaSizes = order.PizzaOrders?.Select(x => x.Pizza.PizzaSize).ToList(),
                 Id = order.Id
             };
         }

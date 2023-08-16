@@ -8,23 +8,27 @@
 
     <div class="card main-card">
         <div class="card-body">
-            <h5 class="card-title"><label asp-for="UserFullName"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.UserFullName</span></h5>
-            <h5 class="card-title"><label asp-for="Location"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.Location</span></h5>
-            <h5 class="card-title"><label asp-for="PaymentMethod"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.PaymentMethod</span></h5>
+            <h5 class="card-title"><label asp-for="UserFullName"></label>: <span class="card-subtitle mb-2 text-muted">@Model.UserFullName</span></h5>
+            <h5 class="card-title"><label asp-for="Location"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Location</span></h5>
+            <h5 class="card-title"><label asp-for="PaymentMethod"></label>: <span class="card-subtitle mb-2 text-muted">@Model.PaymentMethod</span></h5>
         </div>
     </div>
 
     <br />
     <h4>Pizza List:</h4>
     <div class="row">
-        @if (Model.PizzaNames != null && Model.PizzaNames.Any())
+        @if (Model.PizzaNames != null && Model.PizzaSizes != null && Model.PizzaNames.Any())
         {
-            @foreach (var group in Model.PizzaNames.GroupBy(x => x))
+            var groupedPizzas = Model.PizzaNames
+            .Select((name, index) => new { Name = name, Size = Model.PizzaSizes[index] })
+            .GroupBy(pizza => new { pizza.Name, pizza.Size });
+
+            @foreach (var group in groupedPizzas)
             {
-                <div class="card pizza-list-card">
+                <div class="card pizza-list-card details-list-card">
                     <img class="card-img-top" src="~/images/default-pizza.webp" alt="Pizza">
                     <div class="card-body text-center justify-content-center">
-                        <span>@group.Key - @group.Count()</span>
+                        <span>@($"{group.Key.Name} ({group.Key.Size})") - @group.Count()</span>
                     </div>
                 </div>
             }
@@ -44,5 +48,5 @@
     </div>
 
     <hr />
-    <a asp-action="Index" class="btn btn-success btn-lg mx-2 w-25">Go Back To Orders</a>
+    <a asp-action="Index" class="btn btn-outline-dark btn-lg">Go Back To Orders</a>
 </div>

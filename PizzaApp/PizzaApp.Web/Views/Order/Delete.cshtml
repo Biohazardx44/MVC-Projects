@@ -8,9 +8,9 @@
 
     <div class="card main-card">
         <div class="card-body">
-            <h5 class="card-title"><label asp-for="UserFullName"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.UserFullName</span></h5>
-            <h5 class="card-title"><label asp-for="Location"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.Location</span></h5>
-            <h5 class="card-title"><label asp-for="PaymentMethod"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.PaymentMethod</span></h5>
+            <h5 class="card-title"><label asp-for="UserFullName"></label>: <span class="card-subtitle mb-2 text-muted">@Model.UserFullName</span></h5>
+            <h5 class="card-title"><label asp-for="Location"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Location</span></h5>
+            <h5 class="card-title"><label asp-for="PaymentMethod"></label>: <span class="card-subtitle mb-2 text-muted">@Model.PaymentMethod</span></h5>
         </div>
     </div>
 
@@ -22,7 +22,6 @@
             @foreach (var group in Model.PizzaNames.GroupBy(x => x))
             {
                 <div class="card pizza-list-card">
-                    <img class="card-img-top" src="~/images/default-pizza.webp" alt="Pizza">
                     <div class="card-body text-center justify-content-center">
                         <span>@group.Key - @group.Count()</span>
                     </div>

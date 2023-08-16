@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5UhtGjeo1+cuiLwfmicMXasjBZemB0xiBRYpyDcfoe8=",
+  "Hash": "NuSQIeVmjmzieS2AetdaS4pv5fzqCxAflILkcQiYaio=",
   "Source": "PizzaApp.Web",
   "BasePath": "_content/PizzaApp.Web",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pizza-shop-logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\images\\pizza-special-promotion.jpg",
+      "SourceId": "PizzaApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\",
+      "BasePath": "_content/PizzaApp.Web",
+      "RelativePath": "images/pizza-special-promotion.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\pizza-special-promotion.jpg"
     },
     {
       "Identity": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\js\\site.js",

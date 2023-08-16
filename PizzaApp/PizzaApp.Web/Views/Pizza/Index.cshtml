@@ -1,0 +1,36 @@
+﻿@model List<PizzaListViewModel>
+@{
+    ViewData["Title"] = "Pizzas";
+}
+
+<div class="fade-in">
+    <div class="text-center bounce-in">
+        <a asp-action="Create" asp-controller="Pizza" class="btn btn-outline-success">Add new pizza</a>
+        <h2 class="display-5">Pizza List:</h2>
+    </div>
+</div>
+
+<br />
+<div class="row d-flex justify-content-center fade-in">
+    @foreach (var pizza in @Model)
+    {
+        <div class="card pizza-card">
+            <div class="card-header text-center">
+                <strong>@pizza.Name</strong>
+            </div>
+
+            <div class="card-body">
+                <div>
+                    <strong>Pizza Size:</strong>
+                    <span>@pizza.PizzaSize</span>
+                </div>
+            </div>
+
+            <div class="pizza-links">
+                <a asp-controller="Pizza" asp-action="Details" asp-route-id="@pizza.Id" class="details-link">See Details</a><br />
+                <a asp-controller="Pizza" asp-action="Edit" asp-route-id="@pizza.Id" class="edit-link">Edit Pizza</a><br />
+                <a asp-controller="Pizza" asp-action="Delete" asp-route-id="@pizza.Id" class="delete-link">Delete Pizza</a>
+            </div>
+        </div>
+    }
+</div>

@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\images\\pizza-shop-logo.png"
     },
     {
+      "Id": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\images\\pizza-special-promotion.jpg",
+      "PackagePath": "staticwebassets\\images\\pizza-special-promotion.jpg"
+    },
+    {
       "Id": "C:\\Users\\nikol\\Desktop\\Code\\MVC-Projects\\PizzaApp\\PizzaApp.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
