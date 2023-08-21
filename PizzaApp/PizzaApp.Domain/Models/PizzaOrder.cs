@@ -1,6 +1,4 @@
-﻿using PizzaApp.Domain.Enums;
-
-namespace PizzaApp.Domain.Models
+﻿namespace PizzaApp.Domain.Models
 {
     public class PizzaOrder : BaseEntity
     {

@@ -8,11 +8,11 @@ namespace PizzaApp.Services
 {
     public class PizzaService : IPizzaService
     {
-        private IRepository<Order> _orderRepository;
-        private IPizzaRepository _pizzaRepository;
+        private IOrderRepository _orderRepository;
+        private IRepository<Pizza> _pizzaRepository;
 
-        public PizzaService(IRepository<Order> orderRepository,
-                            IPizzaRepository pizzaRepository)
+        public PizzaService(IOrderRepository orderRepository,
+                            IRepository<Pizza> pizzaRepository)
         {
             _orderRepository = orderRepository;
             _pizzaRepository = pizzaRepository;
@@ -25,7 +25,6 @@ namespace PizzaApp.Services
         public void AddPizza(PizzaViewModel pizzaViewModel)
         {
             Pizza pizza = new Pizza();
-
             pizzaViewModel.MapToPizza(pizza);
 
             int newPizzaId = _pizzaRepository.Insert(pizza);
@@ -62,7 +61,6 @@ namespace PizzaApp.Services
             }
 
             pizzaViewModel.MapToPizza(pizzaDb);
-            pizzaDb.Id = pizzaViewModel.Id;
             _pizzaRepository.Update(pizzaDb);
         }
 
@@ -73,7 +71,7 @@ namespace PizzaApp.Services
         public List<PizzaListViewModel> GetAllPizzas()
         {
             List<Pizza> dbPizzas = _pizzaRepository.GetAll();
-            return dbPizzas.Select(x => x.MapToPizzaListViewModel()).ToList();
+            return dbPizzas.Select(pizza => pizza.MapToPizzaListViewModel()).ToList();
         }
 
         /// <summary>

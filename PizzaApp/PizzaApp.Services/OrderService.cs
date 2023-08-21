@@ -8,13 +8,13 @@ namespace PizzaApp.Services
 {
     public class OrderService : IOrderService
     {
-        private IRepository<Order> _orderRepository;
+        private IOrderRepository _orderRepository;
         private IRepository<User> _userRepository;
-        private IPizzaRepository _pizzaRepository;
+        private IRepository<Pizza> _pizzaRepository;
 
-        public OrderService(IRepository<Order> orderRepository,
+        public OrderService(IOrderRepository orderRepository,
                             IRepository<User> userRepository,
-                            IPizzaRepository pizzaRepository)
+                            IRepository<Pizza> pizzaRepository)
         {
             _orderRepository = orderRepository;
             _userRepository = userRepository;
@@ -54,7 +54,6 @@ namespace PizzaApp.Services
         public void CreateOrder(OrderViewModel orderViewModel)
         {
             User userDb = _userRepository.GetById(orderViewModel.UserId);
-
             if (userDb == null)
             {
                 throw new Exception($"User with id {orderViewModel.UserId} was not found!");
@@ -133,7 +132,7 @@ namespace PizzaApp.Services
         /// <summary>
         /// Retrieves a list of all orders from the database.
         /// </summary>
-        /// <returns>A list of order view models.</returns>
+        /// <returns>A list of view models representing all orders.</returns>
         public List<OrderListViewModel> GetAllOrders()
         {
             List<Order> dbOrders = _orderRepository.GetAll();
@@ -169,6 +168,21 @@ namespace PizzaApp.Services
             }
 
             return orderDb.MapToOrderViewModel();
+        }
+
+        /// <summary>
+        /// Retrieves a list of order view models for a specific user.
+        /// </summary>
+        /// <param name="userId">The ID of the user for whom to retrieve the orders.</param>
+        /// <returns>A list of view models representing orders associated with the specified user.</returns>
+        public List<OrderViewModel> GetOrdersForUser(int userId)
+        {
+            List<OrderViewModel> orderViewModels = _orderRepository
+                .GetOrdersForUser(userId)
+                .Select(order => order.MapToOrderViewModel())
+                .ToList();
+
+            return orderViewModels;
         }
     }
 }

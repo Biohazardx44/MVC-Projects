@@ -6,8 +6,12 @@
     --secondary-red: #990000;
     --primary-green: #0edf0e;
     --secondary-green: #048504;
+    --primary-blue: #3d5a80;
+    --secondary-blue: #98c1d9;
+    --tertiary-blue: #007bff;
     --primary-link-color: #f8f459;
     --secondary-link-color: #f56523;
+    --tertiary-link-color: #e0fbfc;
     --main-card-color: #f0f0f0;
     --background-color: #ffb248;
     --border-color: #353535;
@@ -119,8 +123,13 @@ body {
     }
 
     .order-card .card-body,
-    .pizza-card .card-body {
+    .pizza-card .card-body,
+    .user-card .card-body {
         padding: 10px;
+    }
+
+    .order-card .order-links {
+        margin-bottom: 10px;
     }
 
     .order-card .order-info {
@@ -132,36 +141,37 @@ body {
             font-weight: bold;
         }
 
-    .order-card .order-links {
-        margin-bottom: 10px;
+    .order-card .edit-link:hover,
+    .order-card .delete-link:hover,
+    .order-card .details-link:hover {
+        color: var(--primary-link-color);
     }
 
-    .order-card .edit-link,
-    .order-card .delete-link,
-    .order-card .details-link,
-    .pizza-card .edit-link,
-    .pizza-card .delete-link,
-    .pizza-card .details-link {
-        color: var(--primary-black);
-        text-decoration: underline;
-        margin: 5px 0;
-        display: inline;
-        padding: 5px 0;
+.user-card {
+    background-color: var(--primary-blue);
+    border: 3px solid var(--border-color);
+    max-width: 21rem;
+    margin: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .user-card .card-header {
+        background-color: var(--secondary-blue);
+        padding: 10px;
         font-weight: bold;
-        transition: color 0.3s ease;
+        border-radius: 0 0 10px 10px;
     }
 
-        .order-card .edit-link:hover,
-        .order-card .delete-link:hover,
-        .order-card .details-link:hover {
-            color: var(--primary-link-color);
-        }
+    .user-card .user-links {
+        margin: 10px 0;
+    }
 
-        .pizza-card .edit-link:hover,
-        .pizza-card .delete-link:hover,
-        .pizza-card .details-link:hover {
-            color: var(--secondary-link-color);
-        }
+    .user-card .edit-link:hover,
+    .user-card .delete-link:hover,
+    .user-card .details-link:hover {
+        color: var(--tertiary-link-color);
+    }
 
 .pizza-card {
     background-color: var(--primary-gray);
@@ -182,6 +192,12 @@ body {
 
     .pizza-card .pizza-links {
         margin: 10px 0;
+    }
+
+    .pizza-card .edit-link:hover,
+    .pizza-card .delete-link:hover,
+    .pizza-card .details-link:hover {
+        color: var(--secondary-link-color);
     }
 
 .pizza-list-card {
@@ -213,6 +229,36 @@ body {
 
     .details-list-card div span {
         font-weight: bold;
+    }
+
+.edit-link,
+.delete-link,
+.details-link {
+    color: var(--primary-black);
+    text-decoration: underline;
+    margin: 5px 0;
+    display: inline;
+    padding: 5px 0;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.view-orders-link {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: var(--main-card-color);
+    border: 1px solid var(--border-color);
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+    .view-orders-link:hover {
+        background-color: var(--primary-gray);
+        color: var(--tertiary-blue);
+        border-color: var(--tertiary-blue);
     }
 
 .no-promotion-message {
@@ -350,5 +396,9 @@ body {
     .order-card,
     .pizza-card {
         max-width: 19.2rem;
+    }
+
+    .user-card {
+        max-width: 18.7rem;
     }
 }

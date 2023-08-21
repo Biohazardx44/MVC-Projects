@@ -16,7 +16,8 @@
     --burger-border-color: #a44cd3;
     --burger-color: #f0bbf3;
     --burger-header: #d90077;
-    --navbar-background-color: #d8c6ad;
+    --navbar-background-color: #d0ba9c;
+    --footer-background-color: #f4e1c8;
 }
 
 html {
@@ -32,6 +33,10 @@ body {
 
 .navbar {
     background-color: var(--navbar-background-color) !important;
+}
+
+.footer {
+    background-color: var(--footer-background-color);
 }
 
 .navbar-nav .nav-link {
@@ -91,7 +96,7 @@ body {
 
     .custom-checkbox:checked {
         background-color: var(--primary-green);
-        border-color: var(--primary-green);
+        border-color: var(--secondary-green);
     }
 
 .main-card {
@@ -152,6 +157,7 @@ body {
         border-radius: 10px;
         font-weight: bold;
         border: 2px solid var(--primary-black);
+        transition: background-color 0.3s ease;
     }
 
     .order-card .edit-link,
@@ -159,7 +165,6 @@ body {
     .burger-card .edit-link {
         background-color: var(--primary-green);
         margin-right: 10px;
-        transition: background-color 0.3s ease;
     }
 
         .order-card .edit-link:hover,
@@ -172,7 +177,6 @@ body {
     .location-card .delete-link,
     .burger-card .delete-link {
         background-color: var(--primary-red);
-        transition: background-color 0.3s ease;
     }
 
         .order-card .delete-link:hover,
@@ -218,6 +222,10 @@ body {
         padding: 10px;
     }
 
+    .burger-list-card div span {
+        font-weight: bold;
+    }
+
 .d-md-none {
     position: fixed;
     bottom: 1rem;
@@ -231,6 +239,7 @@ body {
     color: var(--primary-white);
     background-color: var(--primary-blue);
     font-size: 16px;
+    font-weight: bold;
     border: none;
     border-radius: 5px;
     cursor: pointer;

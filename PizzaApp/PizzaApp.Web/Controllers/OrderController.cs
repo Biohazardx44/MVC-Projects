@@ -60,6 +60,7 @@ namespace PizzaApp.Web.Controllers
         /// <summary>
         /// Action method that handles the HTTP GET request for creating a new order.
         /// It returns the "Create" view for creating a new order.
+        /// If no users are available for creating the order, it returns the "UserNotFoundForCreate" view.
         /// </summary>
         /// <returns>The "Create" view.</returns>
         [HttpGet]
@@ -67,6 +68,12 @@ namespace PizzaApp.Web.Controllers
         {
             OrderViewModel orderViewModel = new OrderViewModel();
             ViewBag.Users = _userService.GetUsersForDropdown();
+
+            if (ViewBag.Users.Count == 0)
+            {
+                return View("UserNotFoundForCreate");
+            }
+
             return View(orderViewModel);
         }
 
@@ -134,12 +141,14 @@ namespace PizzaApp.Web.Controllers
         /// If the model state is not valid, it returns the "Edit" view with the entered data.
         /// If the update is successful, it redirects to the "Index" view.
         /// If the order with the specified ID is not found, it returns the "ResourceNotFound" view.
+        /// If the selected user for editing the order is not found, it returns the "UserNotFoundForEdit" view.
         /// </summary>
         /// <param name="orderViewModel">The edited order data from the "Edit" view.</param>
         /// <returns>
         /// If successful, redirects to the "Index" view.
         /// If model state is invalid, returns the "Edit" view with entered data.
         /// If the order with the specified ID is not found, returns the "ResourceNotFound" view.
+        /// If the selected user for editing the order is not found, returns the "UserNotFoundForEdit" view.
         /// </returns>
         [HttpPost]
         public IActionResult Edit(OrderViewModel orderViewModel)
@@ -152,6 +161,13 @@ namespace PizzaApp.Web.Controllers
 
             try
             {
+                var availableUserIds = _userService.GetUsersForDropdown().Select(u => u.Id);
+                if (!availableUserIds.Contains(orderViewModel.UserId))
+                {
+                    ViewBag.OrderId = orderViewModel.Id;
+                    return View("UserNotFoundForEdit");
+                }
+
                 _orderService.EditOrder(orderViewModel);
                 return RedirectToAction("Index");
             }
@@ -199,11 +215,12 @@ namespace PizzaApp.Web.Controllers
         /// If the order with the specified ID is not found, it returns the "ResourceNotFound" view.
         /// If an error occurs during the deletion process, it returns the "ExceptionPage" view.
         /// </summary>
-        /// <param name="orderViewModel">The order data from the "Delete" view.</param>
+        /// <param name="orderDetailsViewModel">The order data from the "Delete" view.</param>
         /// <returns>
         /// If successful, redirects to the "Index" view.
         /// If the order with the specified ID is not found, returns the "ResourceNotFound" view.
         /// If an error occurs, returns the "ExceptionPage" view.
+        /// </returns>
         [HttpPost]
         public IActionResult Delete(OrderDetailsViewModel orderDetailsViewModel)
         {
@@ -258,7 +275,8 @@ namespace PizzaApp.Web.Controllers
             }
             catch (Exception e)
             {
-                return View("ExceptionPage");
+                ViewBag.OrderId = pizzaOrderViewModel.OrderId;
+                return View("PizzaNotFound");
             }
         }
 

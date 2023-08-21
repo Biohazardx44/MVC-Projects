@@ -11,7 +11,9 @@
 
         <div class="form-group">
             <label asp-for="PizzaId" class="custom-control-label"></label>
-            <select class="form-control custom-input w-50" asp-for="PizzaId" asp-items="@(new SelectList(ViewBag.Pizzas, "Id", "Name"))"></select>
+            <select class="form-control custom-input w-50" asp-for="PizzaId" asp-items="@(new SelectList(ViewBag.Pizzas, "Id", "Name"))">
+                <option value="">-- Select Pizza --</option>
+            </select>
         </div>
 
         <hr class="w-50" />

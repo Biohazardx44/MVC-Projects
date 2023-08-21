@@ -17,7 +17,6 @@ namespace BurgerApp.Web.Controllers
             _orderService = orderService;
             _burgerService = burgerService;
             _locationService = locationService;
-
         }
 
         /// <summary>
@@ -42,6 +41,7 @@ namespace BurgerApp.Web.Controllers
         {
             OrderViewModel orderViewModel = new OrderViewModel();
             ViewBag.Locations = _locationService.GetLocationsForDropdown();
+
             return View(orderViewModel);
         }
 
@@ -234,7 +234,8 @@ namespace BurgerApp.Web.Controllers
             }
             catch (Exception e)
             {
-                return View("ExceptionPage");
+                ViewBag.OrderId = burgerOrderViewModel.OrderId;
+                return View("BurgerNotFound");
             }
         }
 
@@ -253,7 +254,7 @@ namespace BurgerApp.Web.Controllers
         {
             BurgerOrderViewModel burgerOrderViewModel = new BurgerOrderViewModel();
             burgerOrderViewModel.OrderId = id;
-            ViewBag.Burgers = _orderService.GetAllBurgers();
+            ViewBag.Burgers = _burgerService.GetBurgersForDropdown();
             return View(burgerOrderViewModel);
         }
 

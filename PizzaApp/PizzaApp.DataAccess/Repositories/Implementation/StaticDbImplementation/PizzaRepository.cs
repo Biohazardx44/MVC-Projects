@@ -4,17 +4,8 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation
 {
-    public class PizzaRepository : IPizzaRepository
+    public class PizzaRepository : IRepository<Pizza>
     {
-        /// <summary>
-        /// Retrieves a pizza that is currently on promotion from the StaticDb.
-        /// </summary>
-        /// <returns>The pizza object that is on promotion, or null if none are found.</returns>
-        public Pizza GetPizzaOnPromotion()
-        {
-            return StaticDb.Pizzas.FirstOrDefault(pizza => pizza.IsOnPromotion);
-        }
-
         /// <summary>
         /// Deletes a pizza by its ID from the StaticDb.
         /// </summary>
@@ -31,9 +22,9 @@ namespace PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation
         }
 
         /// <summary>
-        /// Gets all pizza from the StaticDb.
+        /// Gets all pizzas from the StaticDb.
         /// </summary>
-        /// <returns>A list of all pizza in the StaticDb.</returns>
+        /// <returns>A list of all pizzas in the StaticDb.</returns>
         public List<Pizza> GetAll()
         {
             return StaticDb.Pizzas;

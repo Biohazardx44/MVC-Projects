@@ -12,8 +12,8 @@
             <h5 class="card-title"><label asp-for="Address"></label>: <br /><span class="card-subtitle mb-2 text-muted">@Model.Address</span></h5>
 
             <hr class="border-top border-secondary border-4" />
-            <h5 class="card-title"><label asp-for="OpensAt"></label>: <span class="card-subtitle mb-2 text-muted">@Model.OpensAt.ToString("h tt")</span></h5>
-            <h5 class="card-title"><label asp-for="ClosesAt"></label>: <span class="card-subtitle mb-2 text-muted">@Model.ClosesAt.ToString("h tt")</span></h5>
+            <h5 class="card-title"><label asp-for="OpensAt"></label>: <span class="card-subtitle mb-2 text-muted">@Model.OpensAt.ToString("h:mm tt")</span></h5>
+            <h5 class="card-title"><label asp-for="ClosesAt"></label>: <span class="card-subtitle mb-2 text-muted">@Model.ClosesAt.ToString("h:mm tt")</span></h5>
         </div>
     </div>
 

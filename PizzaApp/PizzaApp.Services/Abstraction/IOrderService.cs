@@ -12,5 +12,6 @@ namespace PizzaApp.Services.Abstraction
         void DeleteOrder(int id);
         void AddPizzaToEdit(PizzaOrderViewModel pizzaOrderViewModel);
         void DeletePizzaFromEdit(PizzaOrderViewModel pizzaOrderViewModel);
+        List<OrderViewModel> GetOrdersForUser(int userId);
     }
 }

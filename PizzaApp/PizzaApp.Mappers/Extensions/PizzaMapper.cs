@@ -49,16 +49,5 @@ namespace PizzaApp.Mappers.Extensions
                 PizzaSize = pizza.PizzaSize,
             };
         }
-
-        public static PizzaViewModel MapFromPizzaDetailsViewModel(this PizzaDetailsViewModel pizzaDetailsViewModel)
-        {
-            return new PizzaViewModel
-            {
-                Id = pizzaDetailsViewModel.Id,
-                Name = pizzaDetailsViewModel.Name,
-                IsOnPromotion = pizzaDetailsViewModel.IsOnPromotion,
-                PizzaSize = pizzaDetailsViewModel.PizzaSize
-            };
-        }
     }
 }

@@ -1,5 +1,4 @@
-﻿using BurgerApp.ViewModels.BurgerViewModels;
-using BurgerApp.ViewModels.OrderViewModels;
+﻿using BurgerApp.ViewModels.OrderViewModels;
 
 namespace BurgerApp.Services.Abstraction
 {
@@ -13,7 +12,6 @@ namespace BurgerApp.Services.Abstraction
         void DeleteOrder(int id);
         void AddBurgerToEdit(BurgerOrderViewModel burgerOrderViewModel);
         void DeleteBurgerFromEdit(BurgerOrderViewModel burgerOrderViewModel);
-        List<BurgerViewModel> GetAllBurgers();
         decimal AverageOrderPrice();
     }
 }

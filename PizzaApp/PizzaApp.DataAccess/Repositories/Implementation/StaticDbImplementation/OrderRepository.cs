@@ -4,7 +4,7 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation
 {
-    public class OrderRepository : IRepository<Order>
+    public class OrderRepository : IOrderRepository
     {
         /// <summary>
         /// Deletes an order by its ID from the StaticDb.
@@ -66,6 +66,16 @@ namespace PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation
             }
             int index = StaticDb.Orders.IndexOf(order);
             StaticDb.Orders[index] = entity;
+        }
+
+        /// <summary>
+        /// Retrieves a list of orders associated with a specific user from the in-memory database.
+        /// </summary>
+        /// <param name="userId">The ID of the user for whom to retrieve orders.</param>
+        /// <returns>A list of orders associated with the specified user.</returns>
+        public List<Order> GetOrdersForUser(int userId)
+        {
+            return StaticDb.Orders.Where(order => order.User.Id == userId).ToList();
         }
     }
 }

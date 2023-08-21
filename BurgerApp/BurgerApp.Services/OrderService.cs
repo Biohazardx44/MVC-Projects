@@ -2,7 +2,6 @@
 using BurgerApp.Domain.Models;
 using BurgerApp.Mappers.Extensions;
 using BurgerApp.Services.Abstraction;
-using BurgerApp.ViewModels.BurgerViewModels;
 using BurgerApp.ViewModels.OrderViewModels;
 
 namespace BurgerApp.Services
@@ -142,19 +141,9 @@ namespace BurgerApp.Services
         }
 
         /// <summary>
-        /// Retrieves a list of all burgers from the database.
-        /// </summary>
-        /// <returns>A list of burger view models.</returns>
-        public List<BurgerViewModel> GetAllBurgers()
-        {
-            List<Burger> burgers = _burgerRepository.GetAll();
-            return burgers.Select(x => x.MapToBurgerViewModel()).ToList();
-        }
-
-        /// <summary>
         /// Retrieves a list of all orders from the database.
         /// </summary>
-        /// <returns>A list of order view models.</returns>
+        /// <returns>A list of view models representing all orders.</returns>
         public List<OrderListViewModel> GetAllOrders()
         {
             List<Order> dbOrders = _orderRepository.GetAll();

@@ -4,7 +4,7 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation
 {
-    public class PizzaRepositoryEntity : IPizzaRepository
+    public class PizzaRepositoryEntity : IRepository<Pizza>
     {
         private PizzaAppDbContext _pizzaAppDbContext;
 
@@ -47,15 +47,6 @@ namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImpleme
         public Pizza GetById(int id)
         {
             return _pizzaAppDbContext.Pizzas.FirstOrDefault(x => x.Id == id);
-        }
-
-        /// <summary>
-        /// Retrieves a pizza that is currently on promotion from the database.
-        /// </summary>
-        /// <returns>The pizza object that is on promotion, or null if none are found.</returns>
-        public Pizza GetPizzaOnPromotion()
-        {
-            return _pizzaAppDbContext.Pizzas.FirstOrDefault(x => x.IsOnPromotion);
         }
 
         /// <summary>

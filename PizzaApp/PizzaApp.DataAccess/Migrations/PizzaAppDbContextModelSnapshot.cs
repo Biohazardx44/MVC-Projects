@@ -95,21 +95,21 @@ namespace PizzaApp.DataAccess.Migrations
                             Id = 1,
                             IsOnPromotion = true,
                             Name = "Capricciosa",
-                            PizzaSize = 0
+                            PizzaSize = 1
                         },
                         new
                         {
                             Id = 2,
                             IsOnPromotion = false,
                             Name = "Pepperoni",
-                            PizzaSize = 0
+                            PizzaSize = 2
                         },
                         new
                         {
                             Id = 3,
                             IsOnPromotion = false,
                             Name = "Margherita",
-                            PizzaSize = 0
+                            PizzaSize = 3
                         });
                 });
 
@@ -127,9 +127,6 @@ namespace PizzaApp.DataAccess.Migrations
                     b.Property<int>("PizzaId")
                         .HasColumnType("int");
 
-                    b.Property<int>("PizzaSize")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
 
                     b.HasIndex("OrderId");
@@ -143,22 +140,19 @@ namespace PizzaApp.DataAccess.Migrations
                         {
                             Id = 1,
                             OrderId = 1,
-                            PizzaId = 1,
-                            PizzaSize = 1
+                            PizzaId = 1
                         },
                         new
                         {
                             Id = 2,
                             OrderId = 1,
-                            PizzaId = 2,
-                            PizzaSize = 4
+                            PizzaId = 2
                         },
                         new
                         {
                             Id = 3,
                             OrderId = 2,
-                            PizzaId = 2,
-                            PizzaSize = 2
+                            PizzaId = 2
                         });
                 });
 

@@ -1,0 +1,24 @@
+﻿@model UserDetailsViewModel
+@{
+    ViewData["Title"] = "User Details";
+}
+
+<div class="fade-in">
+    <h2 class="bounce">@ViewData["Title"]:</h2>
+
+    <div class="card main-card">
+        <div class="card-body">
+            <h5 class="card-title"><label asp-for="FullName"></label>: <span class="card-subtitle mb-2 text-muted">@Model.FullName</span></h5>
+            <h5 class="card-title"><label asp-for="Address"></label>: <span class="card-subtitle mb-2 text-muted">@Model.Address</span></h5>
+        </div>
+    </div>
+
+    <br />
+    <h4>Order List:</h4>
+    <div>
+        <a class="view-orders-link" asp-controller="User" asp-action="OrdersForUser" asp-route-userId="@ViewData["userId"]">View Orders</a>
+    </div>
+
+    <hr />
+    <a asp-action="Index" class="btn btn-outline-dark btn-lg">Go Back To All Users</a>
+</div>

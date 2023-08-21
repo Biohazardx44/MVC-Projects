@@ -5,7 +5,7 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation
 {
-    public class OrderRepositoryEntity : IRepository<Order>
+    public class OrderRepositoryEntity : IOrderRepository
     {
         private PizzaAppDbContext _pizzaAppDbContext;
 
@@ -80,6 +80,31 @@ namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImpleme
         {
             _pizzaAppDbContext.Orders.Update(entity);
             _pizzaAppDbContext.SaveChanges();
+        }
+
+        /// <summary>
+        /// Gets a list of orders associated with a specific user from the database.
+        /// </summary>
+        /// <param name="userId">The ID of the user for whom to retrieve the orders.</param>
+        /// <returns>A list of orders associated with the specified user.</returns>
+        public List<Order> GetOrdersForUser(int userId)
+        {
+            try
+            {
+                List<Order> ordersForUser = _pizzaAppDbContext
+                    .Orders
+                    .Include(order => order.User)
+                    .Include(order => order.PizzaOrders)
+                    .ThenInclude(pizzaOrder => pizzaOrder.Pizza)
+                    .Where(order => order.User.Id == userId)
+                    .ToList();
+
+                return ordersForUser;
+            }
+            catch (Exception e)
+            {
+                throw new Exception("An error occurred while retrieving orders for the specified user.", e);
+            }
         }
     }
 }

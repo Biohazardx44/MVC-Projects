@@ -1,0 +1,31 @@
+﻿@model List<UserListViewModel>
+@{
+    ViewData["Title"] = "Users";
+}
+
+<div class="fade-in">
+    <div class="text-center bounce-in">
+        <a asp-action="Create" asp-controller="User" class="btn btn-outline-success">Add new user</a>
+        <h2 class="display-5">User List:</h2>
+    </div>
+</div>
+
+<br />
+<div class="row d-flex justify-content-center fade-in">
+    @foreach (var user in Model)
+    {
+        <div class="card user-card">
+            <div class="card-header text-center">
+                <strong>@user.FullName</strong>
+            </div>
+
+            <div class="card-body">
+                <div class="user-links">
+                    <a asp-controller="User" asp-action="Details" asp-route-id="@user.Id" class="details-link">See Details</a><br />
+                    <a asp-controller="User" asp-action="Edit" asp-route-id="@user.Id" class="edit-link">Edit User</a><br />
+                    <a asp-controller="User" asp-action="Delete" asp-route-id="@user.Id" class="delete-link">Delete User</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>

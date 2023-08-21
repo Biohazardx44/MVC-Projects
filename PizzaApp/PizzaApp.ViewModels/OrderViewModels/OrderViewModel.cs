@@ -13,6 +13,8 @@ namespace PizzaApp.ViewModels.OrderViewModels
         [StringLength(50, MinimumLength = 5, ErrorMessage = "Order Location must be at least 5 characters long.")]
         [Display(Name = "Order Location")]
         public string Location { get; set; } = string.Empty;
+        [Display(Name = "Full Name")]
+        public string UserFullName { get; set; } = string.Empty;
         [Display(Name = "Pizzas")]
         public List<string>? PizzaNames { get; set; }
         [Display(Name = "User")]

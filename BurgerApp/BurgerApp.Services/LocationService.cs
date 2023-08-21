@@ -22,7 +22,6 @@ namespace BurgerApp.Services
         public void AddLocation(LocationViewModel locationViewModel)
         {
             Location location = new Location();
-
             locationViewModel.MapToLocation(location);
 
             int newLocationId = _locationRepository.Insert(location);
@@ -59,7 +58,6 @@ namespace BurgerApp.Services
             }
 
             locationViewModel.MapToLocation(locationDb);
-
             _locationRepository.Update(locationDb);
         }
 

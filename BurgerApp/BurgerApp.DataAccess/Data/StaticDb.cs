@@ -66,16 +66,16 @@ namespace BurgerApp.DataAccess.Data
                     Id = 1,
                     Name ="Quuen St.Burger Shop",
                     Address ="1371 Queen St W",
-                        OpensAt = new DateTime(1, 1, 1, 8, 0, 0),
-                        ClosesAt = new DateTime(1, 1, 5, 22, 0, 0),
+                    OpensAt = new DateTime(1, 1, 1, 8, 0, 0),
+                    ClosesAt = new DateTime(1, 1, 5, 22, 0, 0),
                 },
                 new Location
                 {
                     Id = 2,
                     Name ="Main St.Burger Shop",
                     Address ="360 Main St",
-                        OpensAt = new DateTime(1, 1, 1, 9, 0, 0),
-                        ClosesAt = new DateTime(1, 1, 5, 23, 30, 0),
+                    OpensAt = new DateTime(1, 1, 1, 9, 0, 0),
+                    ClosesAt = new DateTime(1, 1, 5, 23, 30, 0),
                 },
             };
 

@@ -1,0 +1,60 @@
+﻿@model List<OrderViewModel>
+@{
+    ViewData["Title"] = "Orders for User";
+}
+
+<div class="fade-in">
+    <div class="row d-flex justify-content-center justify-content-md-start fade-in">
+        @if (Model.Count > 0)
+        {
+            <h2 class="bounce">Orders for @Model[0]?.UserFullName:</h2>
+
+            @foreach (var order in Model)
+            {
+                <div class="card user-card">
+                    <div class="card-header">
+                        <span>Order#@order.Id: - </span>
+
+                        <strong class="@(order.IsDelivered ? "fas fa-check-circle text-success" : "fas fa-times-circle text-danger")">
+                            @(order.IsDelivered ? "Delivered" : "Not Delivered")
+                        </strong>
+                    </div>
+
+                    <div class="card-body">
+                        <h5>Order Details:</h5>
+                        <span><strong>Location:</strong> @order.Location</span>
+
+                        <br />
+                        <span><strong>Payment Method:</strong> @order.PaymentMethod</span>
+
+                        <hr class="border-top border-4" />
+
+                        <strong>Pizzas:</strong>
+                        @if (order.PizzaNames != null && order.PizzaNames.Count > 0)
+                        {
+                            <ul>
+                                @foreach (var group in order.PizzaNames.GroupBy(x => x))
+                                {
+                                    <li>@group.Key - @group.Count()</li>
+                                }
+                            </ul>
+                        }
+                        else
+                        {
+                            <span>N/A</span>
+                        }
+                    </div>
+                </div>
+            }
+        }
+        else
+        {
+            <h2 class="bounce">Orders for User:</h2>
+            <p>This user does not have any orders yet :(</p>
+        }
+    </div>
+
+    <hr />
+    <a asp-action="Index" class="btn btn-outline-dark btn-lg">Go Back To All Users</a>
+    <a asp-controller="User" asp-action="Details" asp-route-id="@ViewBag.UserId" class="btn btn-outline-primary btn-lg">Go Back To User</a>
+</div>

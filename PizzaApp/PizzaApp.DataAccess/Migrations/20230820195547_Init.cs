@@ -67,8 +67,7 @@ namespace PizzaApp.DataAccess.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     PizzaId = table.Column<int>(type: "int", nullable: false),
-                    OrderId = table.Column<int>(type: "int", nullable: false),
-                    PizzaSize = table.Column<int>(type: "int", nullable: false)
+                    OrderId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -92,9 +91,9 @@ namespace PizzaApp.DataAccess.Migrations
                 columns: new[] { "Id", "IsOnPromotion", "Name", "PizzaSize" },
                 values: new object[,]
                 {
-                    { 1, true, "Capricciosa", 0 },
-                    { 2, false, "Pepperoni", 0 },
-                    { 3, false, "Margherita", 0 }
+                    { 1, true, "Capricciosa", 1 },
+                    { 2, false, "Pepperoni", 2 },
+                    { 3, false, "Margherita", 3 }
                 });
 
             migrationBuilder.InsertData(
@@ -118,18 +117,18 @@ namespace PizzaApp.DataAccess.Migrations
 
             migrationBuilder.InsertData(
                 table: "PizzaOrder",
-                columns: new[] { "Id", "OrderId", "PizzaId", "PizzaSize" },
-                values: new object[] { 1, 1, 1, 1 });
+                columns: new[] { "Id", "OrderId", "PizzaId" },
+                values: new object[] { 1, 1, 1 });
 
             migrationBuilder.InsertData(
                 table: "PizzaOrder",
-                columns: new[] { "Id", "OrderId", "PizzaId", "PizzaSize" },
-                values: new object[] { 2, 1, 2, 4 });
+                columns: new[] { "Id", "OrderId", "PizzaId" },
+                values: new object[] { 2, 1, 2 });
 
             migrationBuilder.InsertData(
                 table: "PizzaOrder",
-                columns: new[] { "Id", "OrderId", "PizzaId", "PizzaSize" },
-                values: new object[] { 3, 2, 2, 2 });
+                columns: new[] { "Id", "OrderId", "PizzaId" },
+                values: new object[] { 3, 2, 2 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Orders_UserId",

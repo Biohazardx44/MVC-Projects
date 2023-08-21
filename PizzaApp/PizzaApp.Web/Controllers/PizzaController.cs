@@ -1,8 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using PizzaApp.Mappers.Extensions;
-using PizzaApp.Services;
 using PizzaApp.Services.Abstraction;
-using PizzaApp.ViewModels.OrderViewModels;
 using PizzaApp.ViewModels.PizzaViewModels;
 
 namespace PizzaApp.Web.Controllers
@@ -177,9 +174,7 @@ namespace PizzaApp.Web.Controllers
             try
             {
                 PizzaDetailsViewModel pizzaDetailsViewModel = _pizzaService.GetPizzaDetails(id.Value);
-                PizzaViewModel pizzaViewModel = pizzaDetailsViewModel.MapFromPizzaDetailsViewModel();
-
-                return View(pizzaViewModel);
+                return View(pizzaDetailsViewModel);
             }
             catch (Exception e)
             {
@@ -194,18 +189,18 @@ namespace PizzaApp.Web.Controllers
         /// If the pizza with the specified ID is not found, it returns the "ResourceNotFound" view.
         /// If an error occurs during the deletion process, it returns the "ExceptionPage" view.
         /// </summary>
-        /// <param name="pizzaViewModel">The pizza data from the "Delete" view.</param>
+        /// <param name="pizzaDetailsViewModel">The pizza data from the "Delete" view.</param>
         /// <returns>
         /// If successful, redirects to the "Index" view.
         /// If the pizza with the specified ID is not found, returns the "ResourceNotFound" view.
         /// If an error occurs, returns the "ExceptionPage" view.
         /// </returns>
         [HttpPost]
-        public IActionResult Delete(PizzaViewModel pizzaViewModel)
+        public IActionResult Delete(PizzaDetailsViewModel pizzaDetailsViewModel)
         {
             try
             {
-                _pizzaService.DeletePizza(pizzaViewModel.Id);
+                _pizzaService.DeletePizza(pizzaDetailsViewModel.Id);
                 return RedirectToAction("Index");
             }
             catch (Exception e)

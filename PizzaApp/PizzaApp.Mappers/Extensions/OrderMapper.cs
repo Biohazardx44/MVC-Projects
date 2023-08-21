@@ -21,8 +21,9 @@ namespace PizzaApp.Mappers.Extensions
                 IsDelivered = order.IsDelivered,
                 Location = order.Location,
                 PaymentMethod = order.PaymentMethod,
+                UserFullName = $"{order.User.FirstName} {order.User.LastName}",
                 PizzaNames = order.PizzaOrders?.Select(x => x.Pizza.Name).ToList(),
-                UserId = order.UserId
+                UserId = order.User.Id
             };
         }
 
@@ -41,13 +42,13 @@ namespace PizzaApp.Mappers.Extensions
         {
             return new OrderDetailsViewModel
             {
+                Id = order.Id,
                 IsDelivered = order.IsDelivered,
-                PaymentMethod = order.PaymentMethod,
                 Location = order.Location,
+                PaymentMethod = order.PaymentMethod,
                 UserFullName = $"{order.User.FirstName} {order.User.LastName}",
                 PizzaNames = order.PizzaOrders?.Select(x => x.Pizza.Name).ToList(),
-                PizzaSizes = order.PizzaOrders?.Select(x => x.Pizza.PizzaSize).ToList(),
-                Id = order.Id
+                PizzaSizes = order.PizzaOrders?.Select(x => x.Pizza.PizzaSize).ToList()
             };
         }
     }

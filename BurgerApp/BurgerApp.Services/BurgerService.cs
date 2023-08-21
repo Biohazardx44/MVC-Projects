@@ -25,7 +25,6 @@ namespace BurgerApp.Services
         public void AddBurger(BurgerViewModel burgerViewModel)
         {
             Burger burger = new Burger();
-
             burgerViewModel.MapToBurger(burger);
 
             int newBurgerId = _burgerRepository.Insert(burger);
@@ -62,7 +61,6 @@ namespace BurgerApp.Services
             }
 
             burgerViewModel.MapToBurger(burgerDb);
-            burgerDb.Id = burgerViewModel.Id;
             _burgerRepository.Update(burgerDb);
         }
 

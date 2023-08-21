@@ -13,7 +13,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
         /// <exception cref="Exception">Thrown when the order with the specified ID is not found.</exception>
         public void DeleteById(int id)
         {
-            Order order = StaticDb.Orders.FirstOrDefault(x => x.Id == id);
+            Order order = StaticDb.Orders.FirstOrDefault(order => order.Id == id);
             if (order == null)
             {
                 throw new Exception($"Order with id {id} was not found!");
@@ -37,7 +37,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
         /// <returns>The order with the specified ID if found; otherwise, null.</returns>
         public Order GetById(int id)
         {
-            return StaticDb.Orders.FirstOrDefault(x => x.Id == id);
+            return StaticDb.Orders.FirstOrDefault(order => order.Id == id);
         }
 
         /// <summary>
@@ -59,7 +59,7 @@ namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementatio
         /// <exception cref="Exception">Thrown when the order with the specified ID is not found.</exception>
         public void Update(Order entity)
         {
-            Order order = StaticDb.Orders.FirstOrDefault(x => x.Id == entity.Id);
+            Order order = StaticDb.Orders.FirstOrDefault(order => order.Id == entity.Id);
             if (order == null)
             {
                 throw new Exception($"Order with id {entity.Id} was not found!");

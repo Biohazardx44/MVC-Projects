@@ -7,6 +7,7 @@ namespace BurgerApp.Mappers.Extensions
     {
         public static void MapToBurger(this BurgerViewModel burgerViewModel, Burger burger)
         {
+            burger.Id = burgerViewModel.Id;
             burger.Name = burgerViewModel.Name;
             burger.Price = burgerViewModel.Price;
             burger.IsVegetarian = burgerViewModel.IsVegetarian;

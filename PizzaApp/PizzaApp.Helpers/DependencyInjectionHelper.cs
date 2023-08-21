@@ -30,14 +30,14 @@ namespace PizzaApp.Helpers
         public static void InjectRepositories(this IServiceCollection services)
         {
             // StaticDb
-            services.AddTransient<IRepository<Order>, OrderRepository>();
-            services.AddTransient<IRepository<User>, UserRepository>();
-            services.AddTransient<IPizzaRepository, PizzaRepository>();
+            //services.AddTransient<IOrderRepository, OrderRepository>();
+            //services.AddTransient<IRepository<User>, UserRepository>();
+            //services.AddTransient<IRepository<Pizza>, PizzaRepository>();
 
             // Entity Framework
-            //services.AddTransient<IRepository<Order>, OrderRepositoryEntity>();
-            //services.AddTransient<IRepository<User>, UserRepositoryEntity>();
-            //services.AddTransient<IPizzaRepository, PizzaRepositoryEntity>();
+            services.AddTransient<IOrderRepository, OrderRepositoryEntity>();
+            services.AddTransient<IRepository<User>, UserRepositoryEntity>();
+            services.AddTransient<IRepository<Pizza>, PizzaRepositoryEntity>();
         }
 
         /// <summary>
