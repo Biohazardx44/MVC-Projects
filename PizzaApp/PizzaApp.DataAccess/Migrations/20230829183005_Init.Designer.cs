@@ -11,7 +11,7 @@ using PizzaApp.DataAccess.Data;
 namespace PizzaApp.DataAccess.Migrations
 {
     [DbContext(typeof(PizzaAppDbContext))]
-    [Migration("20230820195547_Init")]
+    [Migration("20230829183005_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
