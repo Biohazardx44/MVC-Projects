@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation
 {
-    public class OrderRepositoryEntity : IRepository<Order>
+    public class OrderRepositoryEntity : IOrderRepository
     {
         private BurgerAppDbContext _burgerAppDbContext;
 

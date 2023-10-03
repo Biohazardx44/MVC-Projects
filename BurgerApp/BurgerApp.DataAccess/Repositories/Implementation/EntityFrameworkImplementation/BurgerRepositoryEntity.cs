@@ -4,7 +4,7 @@ using BurgerApp.Domain.Models;
 
 namespace BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation
 {
-    public class BurgerRepositoryEntity : IRepository<Burger>
+    public class BurgerRepositoryEntity : IBurgerRepository
     {
         private BurgerAppDbContext _burgerAppDbContext;
 

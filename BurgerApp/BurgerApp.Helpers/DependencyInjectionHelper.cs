@@ -1,8 +1,6 @@
 ﻿using BurgerApp.DataAccess.Data;
 using BurgerApp.DataAccess.Repositories.Abstraction;
 using BurgerApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation;
-using BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementation;
-using BurgerApp.Domain.Models;
 using BurgerApp.Services;
 using BurgerApp.Services.Abstraction;
 using Microsoft.EntityFrameworkCore;
@@ -30,13 +28,13 @@ namespace BurgerApp.Helpers
         public static void InjectRepositories(this IServiceCollection services)
         {
             // StaticDb
-            //services.AddTransient<IRepository<Order>, OrderRepository>();
-            //services.AddTransient<IRepository<Burger>, BurgerRepository>();
+            //services.AddTransient<IOrderRepository, OrderRepository>();
+            //services.AddTransient<IBurgerRepository, BurgerRepository>();
             //services.AddTransient<ILocationRepository, LocationRepository>();
 
             // Entity Framework
-            services.AddTransient<IRepository<Order>, OrderRepositoryEntity>();
-            services.AddTransient<IRepository<Burger>, BurgerRepositoryEntity>();
+            services.AddTransient<IOrderRepository, OrderRepositoryEntity>();
+            services.AddTransient<IBurgerRepository, BurgerRepositoryEntity>();
             services.AddTransient<ILocationRepository, LocationRepositoryEntity>();
         }
 

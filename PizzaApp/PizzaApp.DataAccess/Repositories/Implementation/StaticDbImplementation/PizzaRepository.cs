@@ -4,7 +4,7 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation
 {
-    public class PizzaRepository : IRepository<Pizza>
+    public class PizzaRepository : IPizzaRepository
     {
         /// <summary>
         /// Deletes a pizza by its ID from the StaticDb.

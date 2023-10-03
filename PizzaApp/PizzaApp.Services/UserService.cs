@@ -9,10 +9,10 @@ namespace PizzaApp.Services
     public class UserService : IUserService
     {
         private IOrderRepository _orderRepository;
-        private IRepository<User> _userRepository;
+        private IUserRepository _userRepository;
 
         public UserService(IOrderRepository orderRepository,
-                           IRepository<User> userRepository)
+                           IUserRepository userRepository)
         {
             _orderRepository = orderRepository;
             _userRepository = userRepository;

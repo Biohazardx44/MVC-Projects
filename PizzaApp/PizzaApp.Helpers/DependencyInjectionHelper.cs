@@ -3,8 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using PizzaApp.DataAccess.Data;
 using PizzaApp.DataAccess.Repositories.Abstraction;
 using PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation;
-using PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation;
-using PizzaApp.Domain.Models;
 using PizzaApp.Services;
 using PizzaApp.Services.Abstraction;
 
@@ -31,13 +29,13 @@ namespace PizzaApp.Helpers
         {
             // StaticDb
             //services.AddTransient<IOrderRepository, OrderRepository>();
-            //services.AddTransient<IRepository<User>, UserRepository>();
-            //services.AddTransient<IRepository<Pizza>, PizzaRepository>();
+            //services.AddTransient<IUserRepository, UserRepository>();
+            //services.AddTransient<IPizzaRepository, PizzaRepository>();
 
             // Entity Framework
             services.AddTransient<IOrderRepository, OrderRepositoryEntity>();
-            services.AddTransient<IRepository<User>, UserRepositoryEntity>();
-            services.AddTransient<IRepository<Pizza>, PizzaRepositoryEntity>();
+            services.AddTransient<IUserRepository, UserRepositoryEntity>();
+            services.AddTransient<IPizzaRepository, PizzaRepositoryEntity>();
         }
 
         /// <summary>

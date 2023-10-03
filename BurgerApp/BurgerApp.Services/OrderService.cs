@@ -8,12 +8,12 @@ namespace BurgerApp.Services
 {
     public class OrderService : IOrderService
     {
-        private IRepository<Order> _orderRepository;
-        private IRepository<Burger> _burgerRepository;
+        private IOrderRepository _orderRepository;
+        private IBurgerRepository _burgerRepository;
         private ILocationRepository _locationRepository;
 
-        public OrderService(IRepository<Order> orderRepository,
-                            IRepository<Burger> burgerRepository,
+        public OrderService(IOrderRepository orderRepository,
+                            IBurgerRepository burgerRepository,
                             ILocationRepository locationRepository)
         {
             _orderRepository = orderRepository;

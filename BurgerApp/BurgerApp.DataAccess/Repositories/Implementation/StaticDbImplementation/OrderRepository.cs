@@ -4,7 +4,7 @@ using BurgerApp.Domain.Models;
 
 namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementation
 {
-    public class OrderRepository : IRepository<Order>
+    public class OrderRepository : IOrderRepository
     {
         /// <summary>
         /// Deletes an order by its ID from the StaticDb.

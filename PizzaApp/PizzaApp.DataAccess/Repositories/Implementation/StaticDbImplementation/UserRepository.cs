@@ -4,7 +4,7 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.StaticDbImplementation
 {
-    public class UserRepository : IRepository<User>
+    public class UserRepository : IUserRepository
     {
         /// <summary>
         /// Deletes a user by its ID from the StaticDb.

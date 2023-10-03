@@ -4,7 +4,7 @@ using PizzaApp.Domain.Models;
 
 namespace PizzaApp.DataAccess.Repositories.Implementation.EntityFrameworkImplementation
 {
-    public class PizzaRepositoryEntity : IRepository<Pizza>
+    public class PizzaRepositoryEntity : IPizzaRepository
     {
         private PizzaAppDbContext _pizzaAppDbContext;
 

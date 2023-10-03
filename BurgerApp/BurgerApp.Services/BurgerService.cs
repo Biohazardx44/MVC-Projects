@@ -8,11 +8,11 @@ namespace BurgerApp.Services
 {
     public class BurgerService : IBurgerService
     {
-        private IRepository<Order> _orderRepository;
-        private IRepository<Burger> _burgerRepository;
+        private IOrderRepository _orderRepository;
+        private IBurgerRepository _burgerRepository;
 
-        public BurgerService(IRepository<Order> orderRepository,
-                             IRepository<Burger> burgerRepository)
+        public BurgerService(IOrderRepository orderRepository,
+                             IBurgerRepository burgerRepository)
         {
             _orderRepository = orderRepository;
             _burgerRepository = burgerRepository;

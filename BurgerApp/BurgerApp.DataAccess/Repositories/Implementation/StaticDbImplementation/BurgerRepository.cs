@@ -4,7 +4,7 @@ using BurgerApp.Domain.Models;
 
 namespace BurgerApp.DataAccess.Repositories.Implementation.StaticDbImplementation
 {
-    public class BurgerRepository : IRepository<Burger>
+    public class BurgerRepository : IBurgerRepository
     {
         /// <summary>
         /// Deletes a burger by its ID from the StaticDb.

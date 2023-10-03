@@ -9,10 +9,10 @@ namespace PizzaApp.Services
     public class PizzaService : IPizzaService
     {
         private IOrderRepository _orderRepository;
-        private IRepository<Pizza> _pizzaRepository;
+        private IPizzaRepository _pizzaRepository;
 
         public PizzaService(IOrderRepository orderRepository,
-                            IRepository<Pizza> pizzaRepository)
+                            IPizzaRepository pizzaRepository)
         {
             _orderRepository = orderRepository;
             _pizzaRepository = pizzaRepository;
