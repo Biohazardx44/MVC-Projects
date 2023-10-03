@@ -6,7 +6,7 @@ Welcome to my collection of **MVC Projects** that demonstrate the power and vers
 
 ## BurgerApp
 
-**Version: 1.3.0 Stable**
+**Version: 1.3.1 Stable**
 
 - Entity Framework Integration
 - Major Code Optimization for Improved Performance
@@ -20,7 +20,7 @@ Welcome to my collection of **MVC Projects** that demonstrate the power and vers
 
 ## PizzaApp
 
-**Version: 1.2.0 Stable**
+**Version: 1.2.1 Stable**
 
 - Entity Framework Integration
 - Major Code Optimization for Improved Performance
