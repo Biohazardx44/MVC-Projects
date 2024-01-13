@@ -15,3 +15,4 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.genruntimeconfig.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\ref\PizzaApp.DataAccess.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.DataAccess\obj\Debug\net6.0\PizzaApp.DataAccess.sourcelink.json

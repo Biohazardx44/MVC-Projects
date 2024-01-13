@@ -9,3 +9,4 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\refint\PizzaApp.Domain.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\ref\PizzaApp.Domain.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Domain\obj\Debug\net6.0\PizzaApp.Domain.sourcelink.json

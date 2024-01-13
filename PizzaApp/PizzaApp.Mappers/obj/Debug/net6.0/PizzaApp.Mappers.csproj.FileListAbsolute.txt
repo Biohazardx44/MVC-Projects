@@ -15,3 +15,4 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\refint\PizzaApp.Mappers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\ref\PizzaApp.Mappers.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Mappers\obj\Debug\net6.0\PizzaApp.Mappers.sourcelink.json

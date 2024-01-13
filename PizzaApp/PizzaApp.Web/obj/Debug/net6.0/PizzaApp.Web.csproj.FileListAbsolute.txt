@@ -78,3 +78,4 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\PizzaApp.Web.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\PizzaApp.Web.genruntimeconfig.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\ref\PizzaApp.Web.dll
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\PizzaApp.Web.sourcelink.json
