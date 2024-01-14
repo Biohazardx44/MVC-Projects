@@ -8,10 +8,11 @@
 
 ### Key Features:
 
-- Major Code Optimization for Improved Performance
+- Built on the principles of Object-Oriented Programming (OOP)
 - Comprehensive XML Documentation for Clear Understanding
 - Stylish UI Enhancements for a Sleek User Experience
 - Bug Fixes and Enhancements for Smoother Operations
+- Major Code Optimization for Improved Performance
 - Fully Mobile-Responsive Design
 - Entity Framework Integration
 
