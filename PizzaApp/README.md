@@ -26,4 +26,4 @@ Follow these steps to run PizzaApp locally:
 4. **Change the ConnectionString:** Navigate to `PizzaApp.Web > appsettings.json` and update the connection string to match your local database setup
 5. **Open NuGet Package Console:** Navigate to `Tools > NuGet Package Manager > Package Manager Console`
 6. **Setup Database:** Set PizzaApp.Web as the default project in the console and setup a database with `add-migration <DB Name>` and `update-database` commands in the console
-7. **Access PizzaApp:** Finally, launch the application by clicking on PizzaApp.Web button or by finding the url in `PizzaApp.Web > Properties > launchSettings.json`
+7. **Access PizzaApp:** Finally, launch the application by clicking on `PizzaApp.Web` button or by finding the url in `PizzaApp.Web > Properties > launchSettings.json`
