@@ -25,5 +25,5 @@ Follow these steps to run BurgerApp locally:
 3. **Start the Solution:** Navigate to the directory where you cloned the repository and open the solution in Visual Studio
 4. **Change the ConnectionString:** Navigate to `BurgerApp.Web > appsettings.json` and update the connection string to match your local database setup
 5. **Open NuGet Package Console:** Navigate to `Tools > NuGet Package Manager > Package Manager Console`
-6. **Setup Database:** Set BurgerApp.Web as the default project in the console and setup a database with `add-migration <DB Name>` and `update-database` commands in the console
+6. **Setup Database:** Set `BurgerApp.DataAccess` as the default project in the console, then initialize the database using the `add-migration <DB Name>` and `update-database` commands
 7. **Access BurgerApp:** Finally, launch the application by clicking on `BurgerApp.Web` button or by finding the url in `BurgerApp.Web > Properties > launchSettings.json`
