@@ -16,9 +16,9 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.AssemblyInfoInputs.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.AssemblyInfo.cs
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.csproj.CoreCompileInputs.cache
-C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.csproj.CopyComplete
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\refint\PizzaApp.Helpers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\ref\PizzaApp.Helpers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.Helpers.sourcelink.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Helpers\obj\Debug\net6.0\PizzaApp.FA1F3F4C.Up2Date

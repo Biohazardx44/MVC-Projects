@@ -14,9 +14,9 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\ne
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.AssemblyInfoInputs.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.AssemblyInfo.cs
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.csproj.CoreCompileInputs.cache
-C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.csproj.CopyComplete
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\refint\PizzaApp.Services.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\ref\PizzaApp.Services.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.Services.sourcelink.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Services\obj\Debug\net6.0\PizzaApp.AA895E56.Up2Date

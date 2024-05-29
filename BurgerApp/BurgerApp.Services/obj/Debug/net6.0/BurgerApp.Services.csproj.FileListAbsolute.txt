@@ -14,9 +14,9 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.AssemblyInfoInputs.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.AssemblyInfo.cs
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.csproj.CoreCompileInputs.cache
-C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.csproj.CopyComplete
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\refint\BurgerApp.Services.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\ref\BurgerApp.Services.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerApp.Services.sourcelink.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Services\obj\Debug\net6.0\BurgerAp.9ACE075E.Up2Date

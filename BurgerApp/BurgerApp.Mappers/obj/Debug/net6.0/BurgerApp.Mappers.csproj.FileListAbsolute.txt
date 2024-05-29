@@ -10,9 +10,9 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\n
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.AssemblyInfoInputs.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.AssemblyInfo.cs
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.csproj.CoreCompileInputs.cache
-C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.csproj.CopyComplete
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\refint\BurgerApp.Mappers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\ref\BurgerApp.Mappers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerApp.Mappers.sourcelink.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Mappers\obj\Debug\net6.0\BurgerAp.27E61E65.Up2Date

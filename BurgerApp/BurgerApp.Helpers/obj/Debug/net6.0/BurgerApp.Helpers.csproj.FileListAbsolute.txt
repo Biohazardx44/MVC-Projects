@@ -16,9 +16,9 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\n
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.AssemblyInfoInputs.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.AssemblyInfo.cs
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.csproj.CoreCompileInputs.cache
-C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.csproj.CopyComplete
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\refint\BurgerApp.Helpers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\ref\BurgerApp.Helpers.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerApp.Helpers.sourcelink.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Helpers\obj\Debug\net6.0\BurgerAp.242268EE.Up2Date

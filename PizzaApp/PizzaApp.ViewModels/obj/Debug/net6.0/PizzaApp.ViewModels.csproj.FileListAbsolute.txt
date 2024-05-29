@@ -8,9 +8,9 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.AssemblyInfoInputs.cache
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.AssemblyInfo.cs
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.csproj.CoreCompileInputs.cache
-C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.csproj.CopyComplete
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\refint\PizzaApp.ViewModels.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.pdb
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\ref\PizzaApp.ViewModels.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.ViewModels.sourcelink.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.ViewModels\obj\Debug\net6.0\PizzaApp.B4B16490.Up2Date
