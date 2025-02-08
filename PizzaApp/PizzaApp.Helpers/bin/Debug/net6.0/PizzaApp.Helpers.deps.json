@@ -470,12 +470,18 @@
           "PizzaApp.Domain": "1.0.0"
         },
         "runtime": {
-          "PizzaApp.DataAccess.dll": {}
+          "PizzaApp.DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PizzaApp.Domain/1.0.0": {
         "runtime": {
-          "PizzaApp.Domain.dll": {}
+          "PizzaApp.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PizzaApp.Mappers/1.0.0": {
@@ -484,7 +490,10 @@
           "PizzaApp.ViewModels": "1.0.0"
         },
         "runtime": {
-          "PizzaApp.Mappers.dll": {}
+          "PizzaApp.Mappers.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PizzaApp.Services/1.0.0": {
@@ -494,7 +503,10 @@
           "PizzaApp.ViewModels": "1.0.0"
         },
         "runtime": {
-          "PizzaApp.Services.dll": {}
+          "PizzaApp.Services.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "PizzaApp.ViewModels/1.0.0": {
@@ -502,7 +514,10 @@
           "PizzaApp.Domain": "1.0.0"
         },
         "runtime": {
-          "PizzaApp.ViewModels.dll": {}
+          "PizzaApp.ViewModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

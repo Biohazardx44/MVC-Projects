@@ -79,3 +79,7 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\bin\Debug\net6.
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\obj\Debug\net6.0\BurgerApp.Web.sourcelink.json
 C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\obj\Debug\net6.0\BurgerAp.44D9F370.Up2Date
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\bin\Debug\net6.0\BurgerApp.Web.staticwebassets.endpoints.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\obj\Debug\net6.0\staticwebassets\msbuild.BurgerApp.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\nikol\Desktop\Code\MVC-Projects\BurgerApp\BurgerApp.Web\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt

@@ -471,12 +471,18 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.19"
         },
         "runtime": {
-          "BurgerApp.DataAccess.dll": {}
+          "BurgerApp.DataAccess.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "BurgerApp.Domain/1.0.0": {
         "runtime": {
-          "BurgerApp.Domain.dll": {}
+          "BurgerApp.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "BurgerApp.Mappers/1.0.0": {
@@ -485,7 +491,10 @@
           "BurgerApp.ViewModels": "1.0.0"
         },
         "runtime": {
-          "BurgerApp.Mappers.dll": {}
+          "BurgerApp.Mappers.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "BurgerApp.ViewModels/1.0.0": {
@@ -493,7 +502,10 @@
           "BurgerApp.Domain": "1.0.0"
         },
         "runtime": {
-          "BurgerApp.ViewModels.dll": {}
+          "BurgerApp.ViewModels.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }

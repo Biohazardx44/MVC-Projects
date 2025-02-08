@@ -79,3 +79,7 @@ C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\ref\PizzaApp.Web.dll
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\PizzaApp.Web.sourcelink.json
 C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\PizzaApp.3B159484.Up2Date
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\bin\Debug\net6.0\PizzaApp.Web.staticwebassets.endpoints.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\staticwebassets\msbuild.PizzaApp.Web.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\nikol\Desktop\Code\MVC-Projects\PizzaApp\PizzaApp.Web\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
